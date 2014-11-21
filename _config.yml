@@ -1,6 +1,7 @@
 baseurl: "/writing" # The subpath of your site. Use "" if you're hosting a blog at the root level.
 url: "http://acking.github.io" # the base hostname & protocol for your site
-title: "writing"
+name: "首页"
+title: "ChenQi's BLOG"
 
 # This is used by feed.xml. Uncomment if you want to use it.
 # description: "..."
