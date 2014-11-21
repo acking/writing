@@ -2,10 +2,11 @@
 layout: default
 hide_sidebar: true
 ---
-
+{% if page.title != "About" %}
 <div class="post-header">
   <h1 class="post-title-main">{{ page.title }}</h1>
 </div>
+{% endif %}
 <div class="post-content">
   {{ content }}
 </div>
