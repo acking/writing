@@ -12,10 +12,14 @@
     </div>
   </p>
   <h3>
-    最新评论
+    <form class="navbar-search pull-left" id="search-form">
+        <input type="text" id="google-search" class="search-query" placeholder="搜索..">
+    </form
   </h3>
-
-  <p>
-    123
-  </p>
 </div>
+<script>
+jQuery("#search-form").submit(function(){
+    var query = document.getElementById("google-search").value;
+    window.open("http://google.com/search?q=" + query+ "%20site:" + "http://acking.github.io/writing/");
+});
+</script>
