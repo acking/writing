@@ -1,35 +1,29 @@
-markdown:         rdiscount
-pygments:         true
-paginate:         4
+baseurl: "/writing" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "http://acking.github.io" # the base hostname & protocol for your site
+title: "writing"
 
-title:            陈琦的网络日志
-url:              http://acking.github.io/writing/
-feed:             /atom.xml
-author:
-    name:         acking
-    email:        hbchenqi@gmail.com
-    description:  "acking description"
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
 
-about:            "acking about."
-follow:
-    email:        hbchenqi@gmail.com
-    github:       https://github.com/acking
-    twitter:      
-    google:       
-    facebook:     
-description:      
-
-indexContent:     true
-imageLink:        
-
-
-style:            /css/style.css
-blogName:         陈琦的网络日志 
-blogDesc:         "记录&&分享"
-favicon:          /favicon.ico
-theme:            default
-
-disqus:           piznblog
-
-copyright:        Copyright © 2014 All rights reserved.
-test:             ok
+gems:
+  - jemoji
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "CNAME"
+  - "Gemfile"
+  - "Gemfile.lock"
+permalink: :title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

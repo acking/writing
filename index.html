@@ -1,28 +1,15 @@
 ---
-layout: default
-date: Index
 ---
-{% for rpost in paginator.posts %}
-	<article class="post fn-clear">
-        <h2 class="post-title"><a href="{{ site.url }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h2>
-        <p class="time"><time pubdate="{{ rpost.date }}">{{ rpost.date | date_to_string }}</time></p>
-        {% if site.indexContent == true %}
-        {{ rpost.content }}
-        {% else %}
-        <p>{{ rpost.description }}</p>
-        {% endif %}
-    </article>
+
+{% for post in site.posts limit:site.data.theme.num_home_posts %}
+<div class="post-header-home">
+  <h1 class="post-title-home">
+    <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
+  </h1>
+  {% include post-header-home.html %}
+</div>
+<div class="post-excerpt-home">
+  {{ post.excerpt }}
+  <p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}">Continue Reading &rarr;</a></p>
+</div>
 {% endfor %}
-{% if paginator.total_pages > 1 %}
-    <nav id="pagination" class="fn-clear">
-        <ul class="pagination">
-            {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                    <li class="current"><a href="javascript:void(0);">{{ page }}</a></li>
-                {% else %}
-                    <li><a href="{{ site.url }}/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </nav>
-{% endif %}	
