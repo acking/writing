@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 
 {% for post in paginator.posts %}
@@ -18,44 +19,49 @@
 <div class="pagination">
   <ul> 
     {% if paginator.previous_page %}
-    <li>>
-        {% if paginator.previous_page == 1 %}
-            <a href="{{ prepend:site.baseurl }}">上一页</a>
-        {% else %}
-            <a href="{{ paginator.previous_page_path }}">上一页</a>
-        {% endif %}
-    </li>
+        <li>
+            {% if paginator.previous_page == 1 %}
+                <a href="{{ prepend:site.baseurl }}">上一页</a>
+            {% else %}
+                <a href="{{ paginator.previous_page_path }}">上一页</a>
+            {% endif %}
+        </li>
     {% else %}
-    <li class="disabled">
-        <span>上一页</span>
-    </li>
+        <li class="disabled">
+            <span>上一页</span>
+        </li>
     {% endif %}
     
-    <li class="page">
-      {% if paginator.page == 1 %}
-        <span class="current-page">1</span>
-      {% else %}
-        <a href="{{ prepend:site.baseurl }}">1</a>
-      {% endif %}
-    </li>
+    {% if paginator.page == 1 %}
+        <li class="active">
+            <span>1</span>
+        </li>
+    {% else %}
+        <li>
+            <a href="{{ prepend:site.baseurl }}">1</a>
+        </li>
+    {% endif %}
+    
     {% for count in (2..paginator.total_pages) %}
-    <li class="page">
         {% if count == paginator.page %}
-            <span class="current-page">{{ count }}</span>
+        <li class="active">
+            <span>{{ count }}</span>
+        </li>
         {% else %}
+        <li>
             <a href="/page{{ count }} ">{{ count }}</a>
+        </li>
         {% endif %}
-    </li>
     {% endfor %}
   
     {% if paginator.next_page %}
-    <li>
-        <a href="{{ paginator.next_page_path | prepend:site.baseurl }}">下一页</a>
-    </li>
+        <li>
+            <a href="{{ paginator.next_page_path | prepend:site.baseurl }}">下一页</a>
+        </li>
     {% else %}
-    <li class="disabled">
-        <span>下一页</span>
-    </li>
+        <li class="disabled">
+            <span>下一页</span>
+        </li>
     {% endif %}
   
   </ul>
