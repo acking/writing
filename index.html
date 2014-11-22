@@ -16,6 +16,9 @@
 --------------
 {{ post.tags }}
 ---------------------
-
+    {% for tag in post.tags %}
+    <a href="/show_tag.html?tag={{ tag[0] }}"> {{ tag[0] }}</a>
+    {% endfor %}
+----------------------
 
 {% endfor %}
