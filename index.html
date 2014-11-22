@@ -14,7 +14,7 @@
 </div>
 
 --------------
-{{ post.tags }}
+<a href="#">{{ post.tags }}</a>
 ---------------------
     {% for tag in site.tags %}
     <a href="/show_tag.html?tag={{ tag[0] }}"> {{ tag[0] }}</a>
