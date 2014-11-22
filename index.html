@@ -24,7 +24,7 @@ layout: default
     {% if paginator.previous_page %}
         <li>
             {% if paginator.previous_page == 1 %}
-                <a href="{{ prepend:site.baseurl }}">上一页</a>
+                <a href="{{ site.baseurl }}">上一页</a>
             {% else %}
                 <a href="{{ paginator.previous_page_path | prepend:site.baseurl }}">上一页</a>
             {% endif %}
@@ -41,7 +41,7 @@ layout: default
         </li>
     {% else %}
         <li>
-            <a href="{{ prepend:site.baseurl }}">1</a>
+            <a href="{{ site.baseurl }}">1</a>
         </li>
     {% endif %}
     
