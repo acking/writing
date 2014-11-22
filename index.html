@@ -16,9 +16,7 @@
 --------------
 {{ page.tags | array_to_sentence_string }}
 --------------
-{% for tag in page.tags %}
-    <a href="/show_by_tag.html?tag={{ tag[0] }}"> {{ tag[0] }}</a>
-{% endfor %}
+
 ---------------
 {% assign first = site.tags.first %}
 {% assign max = first[1].size %}
