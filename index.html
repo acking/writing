@@ -13,8 +13,9 @@
   <p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}">阅读全文&rarr;</a></p>
 </div>
 
-<a class="post-category " > 1{{ post.tags | first }}</a>
+<a class="post-category " > 1 {{ post.tags[0] }}</a>
 <a class="post-category " > 2 {{ post.tags[1] }}</a>
+<a class="post-category " > 3 {{ post.tags[2] }}</a>
 
 
 {% endfor %}
