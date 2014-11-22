@@ -12,6 +12,9 @@
   {{ post.excerpt }}
   <p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}">阅读全文&rarr;</a></p>
 </div>
+
 {% for tag in post.tags %}
 <a class="post-category " > {{ post.tags[0] }}</a>
+{% endfor %}
+
 {% endfor %}
