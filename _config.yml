@@ -9,7 +9,7 @@ title: "ChenQi's BLOG"
 markdown: rdiscount
 excerpt_separator: "\n\n"
 paginate: 2
-paginate_path: "writing/page:num"
+paginate_path: "page:num"
 
 gems:
   - jemoji
