@@ -70,8 +70,3 @@ tags: [Unicode编码方案]
     </tbody>
 </table>
 
-
-这样或许还是有些小麻烦，那也没关系，芒果这里有一份比较完整的表格，自己查吧。
-
-转载自 http://www.mangguo.org/css-chinese-font-unicode-encode-solution ------ 芒果
-
