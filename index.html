@@ -10,6 +10,6 @@
 </div>
 <div class="post-excerpt-home">
   {{ post.excerpt }}
-  <p><span class="f-left"><b class="c666">分类:</b>{{ post.categories  }}</span><span  class="f-right"><a href="{{ post.url | prepend:site.baseurl }}">阅读全文&rarr;</a></span></p>
+  <p class="hidden"><span class="f-left"><b class="c666">分类:</b>{{ post.categories  }}</span><span  class="f-right"><a href="{{ post.url | prepend:site.baseurl }}">阅读全文&rarr;</a></span></p>
 </div>
 {% endfor %}
