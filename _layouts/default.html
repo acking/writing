@@ -4,21 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ "/stylesheets/shiori.css" | prepend:site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/stylesheets/style.css" | prepend:site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/stylesheets/font-awesome.min.css" | prepend:site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend:site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/stylesheets/shiori.css" | prepend:site.url }}">
+    <link rel="stylesheet" href="{{ "/stylesheets/style.css" | prepend:site.url }}">
+    <link rel="stylesheet" href="{{ "/stylesheets/font-awesome.min.css" | prepend:site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url | prepend: site.url }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend:site.url }}">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <!--[if lt IE 9]>
-      <script src="{{ "/javascripts/html5shiv.min.js" | prepend:site.baseurl }}"></script>
-      <script src="{{ "/javascripts/respond.min.js" | prepend:site.baseurl }}"></script>
+      <script src="{{ "/javascripts/html5shiv.min.js" | prepend:site.url }}"></script>
+      <script src="{{ "/javascripts/respond.min.js" | prepend:site.url }}"></script>
     <![endif]-->
     {% include head.html %}
   </head>
   <body>
       111
-      {{ "/222" | prepend:site.baseurl }}
+      {{ "/222" | prepend:site.url }}
   {% if site.data.theme.color == "default" %}
     <div class="navbar navbar-default navbar-static-top">
   {% else %}
@@ -33,7 +33,7 @@
               <span class="icon-bar"></span>
             </button>
           </div>
-          <a href="{{ "/" | prepend:site.baseurl }}" class="navbar-brand">{{ site.name }}</a>
+          <a href="{{ "/" | prepend:site.url }}" class="navbar-brand">{{ site.name }}</a>
         </div>
         <div class="collapse navbar-collapse js-navbar-collapse">
           <ul class="navbar-nav nav" data-purplecoat="shiori" data-purplecoat-label="nav.html">
@@ -66,9 +66,9 @@
         </div>
       </div>
     </div>
-    <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
-    <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
-    <script src="{{ "/javascripts/purplecoat-min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/javascripts/jquery.min.js" | prepend:site.url }}"></script>
+    <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.url }}"></script>
+    <script src="{{ "/javascripts/purplecoat-min.js" | prepend:site.url }}"></script>
     {% include scripts.html %}
   </body>
 </html>
