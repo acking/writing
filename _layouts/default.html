@@ -17,7 +17,7 @@
     {% include head.html %}
   </head>
   <body>
-      {{ "/stylesheets/shiori.css" | prepend:site.url }}
+     
   {% if site.data.theme.color == "default" %}
     <div class="navbar navbar-default navbar-static-top">
   {% else %}
@@ -69,5 +69,6 @@
     <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.url }}"></script>
     <script src="{{ "/javascripts/purplecoat-min.js" | prepend:site.url }}"></script>
     {% include scripts.html %}
+     1111111{{ "/stylesheets/shiori.css" | prepend:site.url }}222
   </body>
 </html>
