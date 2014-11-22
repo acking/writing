@@ -2,7 +2,7 @@
 <p class="text-muted">{{ page.date | date_to_string }}</p>
 
 
-Tags：{{ post.tags }}－－{{ page.tags }}
+Tags：－post－{{ post.tags }}－page－{{ page.tags }}－collections－{{ collections.tags }}
 {% for cg in post.tags %}
 <a href="/tags.html#-ref"></a>
 {% if forloop.index < forloop.length %}
