@@ -26,4 +26,13 @@ site
     {% endfor %}
 ----------------------
 
+Tags：
+{ %for cg in post.tags %}
+<a href="/tags.html#-ref"></a>
+{ %if forloop.index < forloop.length %}
+,
+{ %endif%}
+{ %endfor%}
+---------------------
+
 {% endfor %}

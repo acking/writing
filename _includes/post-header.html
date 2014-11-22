@@ -2,11 +2,12 @@
 <p class="text-muted">{{ page.date | date_to_string }}</p>
 
 
+Tags：
 { %for cg in post.tags %}
-    <a href="/tags.html#-ref"></a>
-    { %if forloop.index < forloop.length %}
-    ,
-    { %endif%}
+<a href="/tags.html#-ref"></a>
+{ %if forloop.index < forloop.length %}
+,
+{ %endif%}
 { %endfor%}
 
 <div class="well well-sm">
