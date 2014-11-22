@@ -14,9 +14,7 @@
 </div>
 
 --------------
-{% for ptag in page.tags %}
-<a href="#">{{ ptag[0] }}</a>
-{% endfor %}
+<a href="#">{{ site.tags }}</a>
 ---------------------
     {% for tag in site.tags %}
     <a href="/show_tag.html?tag={{ tag[0] }}"> {{ tag[0] }}</a>
