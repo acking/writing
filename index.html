@@ -13,29 +13,8 @@
   <p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}">阅读全文&rarr;</a></p>
 </div>
 
-
 <a class="post-category " > 1{{ post.tags | first }}</a>
 <a class="post-category " > 2 {{ post.tags[1] }}</a>
---------------
-post
-<a href="#">{{ post.tags }}</a>
-page
-<a href="#">{{ page.tags }}</a>
-site
-<a href="#">{{ site.tags }}</a>
----------------------
-    {% for tag in site.tags %}
-    <a href="/show_tag.html?tag={{ tag[0] }}"> {{ tag[0] }}</a>
-    {% endfor %}
-----------------------
 
-Tags：－post－{{ post.tags }}－page－{{ page.tags }}－collections－{{ collections.tags }}
-{% for cg in post.tags %}
-<a href="/tags.html#-ref"></a>
-{% if forloop.index < forloop.length %}
-,
-{% endif %}
-{% endfor %}
----------------------
 
 {% endfor %}
