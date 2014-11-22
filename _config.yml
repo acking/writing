@@ -8,6 +8,8 @@ title: "ChenQi's BLOG"
 
 markdown: rdiscount
 
+excerpt_separator: "\n\n"
+
 gems:
   - jemoji
 exclude:
