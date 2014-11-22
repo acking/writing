@@ -14,7 +14,7 @@
 </div>
 
 --------------
-{{ post.tags }}
+{{ page.tags | array_to_sentence_string }}
 {% assign first = site.tags.first %}
 {% assign max = first[1].size %}
 {% assign min = max %}
