@@ -16,6 +16,7 @@ layout: default
 {% endfor %}
 
 <!-- 分页链接 -->
+{{ paginator.next_page_path | prepend:site.baseurl }}
 <div class="pagination">
   <ul> 
     {% if paginator.previous_page %}
@@ -23,7 +24,7 @@ layout: default
             {% if paginator.previous_page == 1 %}
                 <a href="{{ prepend:site.baseurl }}">上一页</a>
             {% else %}
-                <a href="{{ paginator.previous_page_path }}">上一页</a>
+                <a href="{{ paginator.next_page_path | prepend:site.baseurl }}">上一页</a>
             {% endif %}
         </li>
     {% else %}
