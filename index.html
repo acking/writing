@@ -1,7 +1,8 @@
 ---
 ---
 
-{% for post in site.posts limit:site.data.theme.num_home_posts %}
+<!--{% for post in site.posts limit:site.data.theme.num_home_posts %}-->
+{% for post in paginator.posts %}
 <div class="post-header-home">
   <h1 class="post-title-home">
     <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
@@ -14,18 +15,7 @@
 </div>
 {% endfor %}
 
---------------遍历分页后的文章---------------------
 
-<!-- 遍历分页后的文章 -->
-{% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
-  </div>
-{% endfor %}
 
 <!-- 分页链接 -->
 <div class="pagination">
@@ -39,7 +29,7 @@
         {% endif %}
     </li>
     {% else %}
-    <li class="previous disabled">
+    <li class="disabled">
         <span>上一页</span>
     </li>
     {% endif %}
@@ -63,11 +53,11 @@
   
     {% if paginator.next_page %}
     <li>
-        <a href="{{ paginator.next_page_path | prepend:site.baseurl }}">Next</a>
+        <a href="{{ paginator.next_page_path | prepend:site.baseurl }}">下一页</a>
     </li>
     {% else %}
-    <li class="next disabled">
-        <span>Next</span>
+    <li class="disabled">
+        <span>下一页</span>
     </li>
     {% endif %}
   
