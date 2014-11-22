@@ -8,7 +8,7 @@ title: "ChenQi's BLOG"
 
 markdown: rdiscount
 excerpt_separator: "\n\n"
-paginate: 1
+paginate: 3
 paginate_path: "page:num"
 
 gems:
