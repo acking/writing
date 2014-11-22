@@ -2,12 +2,8 @@
 <p class="text-muted">{{ page.date | date_to_string }}</p>
 
 
-Tags：－post－{{ post.tags }}－page－{{ page.tags }}－collections－{{ collections.tags }}
-{% for cg in post.tags %}
-<a href="/tags.html#-ref"></a>
-{% if forloop.index < forloop.length %}
-,
-{% endif %}
+{% for tag in page.tags %}
+    <a class="post-category " > {{ tag }} </a>
 {% endfor %}
 
 <div class="well well-sm">
