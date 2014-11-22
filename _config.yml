@@ -1,5 +1,5 @@
 #baseurl: "/writing" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-baseurl: "/"
+baseurl: ""
 url: "http://acking.github.io" # the base hostname & protocol for your site
 name: "首页"
 title: "ChenQi's BLOG"
