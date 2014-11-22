@@ -32,9 +32,9 @@
   {% if paginator.previous_page %}
     <p class="previous">
       {% if paginator.previous_page == 1 %}
-        <a href="/writing/">Previous</a>
+        <a href="{{ prepend:site.baseurl }}">Previous</a>
       {% else %}
-        <a href="writing/{{ paginator.previous_page_path }}">Previous</a>
+        <a href="{{ paginator.previous_page_path | prepend:site.baseurl }}">Previous</a>
       {% endif %}
     </p>
   {% else %}
@@ -48,7 +48,7 @@
       {% if paginator.page == 1 %}
         <span class="current-page">1</span>
       {% else %}
-        <a href="/writing/">1</a>
+        <a href="{{ prepend:site.baseurl }}">1</a>
       {% endif %}
     </li>
 
@@ -57,7 +57,7 @@
         {% if count == paginator.page %}
           <span class="current-page">{{ count }}</span>
         {% else %}
-          <a href="/writing/page{{ count }}">{{ count }}</a>
+          <a href="{{ prepend:site.baseurl }}/page{{ count }} ">{{ count }}</a>
         {% endif %}
       </li>
     {% endfor %}
@@ -65,7 +65,7 @@
 
   {% if paginator.next_page %}
     <p class="next">
-      <a href="{{ paginator.next_page_path  | prepend:site.baseurl }}">Next</a>
+      <a href="{{ paginator.next_page_path | prepend:site.baseurl }}">Next</a>
     </p>
   {% else %}
     <p class="next disabled">
