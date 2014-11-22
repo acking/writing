@@ -16,9 +16,6 @@ layout: default
 {% endfor %}
 
 <!-- 分页链接 -->
-{{ paginator.previous_page_path | prepend:site.baseurl }}
----
-{{ paginator.next_page_path | prepend:site.baseurl }}
 <div class="pagination">
   <ul> 
     {% if paginator.previous_page %}
