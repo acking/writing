@@ -144,6 +144,7 @@
   font-size: 10.5px;
 }
 
+p.text-muted { margin-bottom:4px;}
 .c666 { color:#666;}
 .f-left { float:left;}
 .f-right { float:right;}
