@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+    //设置页面密码
+      function password() {
+        var testV = 1;
+        var pass1 = prompt('Sorry,该页只限熟人浏览,请输入密码:','');
+        while (testV < 3) {
+          if (!pass1) history.go(-1);
+          if (pass1 == "chenqi") {
+            alert('一看你就是自己人，口令正确!');
+            window.location.href="http://acking.github.io/writing/file/2013_summary_acking/i.html#/overview";//修改需要密码认证的网页
+            break;
+          }
+          testV+=1;
+          var pass1 = prompt('朋友，密码不对！:(','');
+        }
+        if (pass1!="password" & testV ==3) history.go(-1);
+        return " ";
+      }
+      document.write(password());
+    </script>
+    </head>
+<body>
+
+</body>
+</html>
