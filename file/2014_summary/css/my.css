@@ -7,8 +7,8 @@ and open the template in the editor.
     Created on : 2015-1-6, 21:28:13
     Author     : chenqi
 */
-.reveal li.page-fy { list-style:none; margin-left:5px; font-size:60%; color:#5d6368;}
-.reveal p.page-fy { list-style:none; font-size:60%; color:#606466;}
+.reveal li.page-fy { list-style:none; margin-left:5px; font-size:70%; color:#5d6368;}
+.reveal p.page-fy { list-style:none; font-size:70%; color:#606466;}
 .c-333 { color:#333;}
 .c-666 { color:#666;}
 .c-999 { color:#999;}
@@ -18,3 +18,4 @@ and open the template in the editor.
 .c-17ff2e { color:#17ff2e;}
 .reveal .with-blockquote { width:80%; font-size:55%;}
 .reveal section img { border-radius:6px;}
+table.tab1 { border:2px solid #fff;}
