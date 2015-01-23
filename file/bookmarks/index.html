@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BookMarks-Acking</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <style type="text/css">
+    	a:link    {color:#000; text-decoration:none;}			/* 未访问的链接 */
+		a:visited {color:#333; text-decoration:none;}		    /* 已访问的链接 */
+		a:hover   {color:#f00; text-decoration:underline; }     /* 鼠标移动到链接上 */
+		a:active  {color:#f00; text-decoration:underline;}		/* 选定的链接 */
+        li { margin:10px 0;}
+        li span { cursor:pointer; font-weight:700; font-family:"\5FAE\8F6F\96C5\9ED1";}
+        /*li.m-expanded { width:260px; float:left; overflow: hidden;}*/
+    </style>
+<script type="text/javascript">
+$(document).ready(function(){
+   $(".m-treeview > li > span").click(function(){ // 注意用的是 子选择器 (  >  )
+		    var $ul = $(this).siblings("ul");
+			if($ul.is(":visible")){
+				$(this).parent().attr("class","m-collapsed");
+				$ul.hide(500);
+			}else{
+				$(this).parent().attr("class","m-expanded");
+				$ul.show(500);
+			}
+			return false;
+   });
+});
+</script>
+    <body>
+        <h1>常用书签</h1>
+        <ul class="m-treeview">
+        	<li class="m-expanded"><span>快速通道</span>
+            	<ul>
+                    <li><a href="https://www.baidu.com" target="_blank">百度一下</a></li>
+                    <li><a href="http://www.google.com" target="_blank">谷歌（google）</a></li>
+                    <li><a href="http://fanyi.baidu.com" target="_blank">百度翻译</a> </li>
+                    <li><a href="http://translate.google.cn" target="_blank">谷歌翻译</a> </li>
+                    <li><a href="http://v2ex.com" target="_blank">V2EX</a> </li>
+                    <li><a href="http://www.codecademy.com" target="_blank">在线编程学习</a> </li>
+                    <li><a href="https://www.icloud.com" target="_blank">苹果icloud</a> </li>
+                </ul>
+            </li>
+            <li class="m-expanded"><span>工作类</span>
+            	<ul style="display:none;">
+                    
+                </ul>
+            </li>
+            <li class="m-expanded"><span>生活类</span>
+                <ul style="display:none;">
+                    <li><a href="http://acking.github.io/writing/file/2014_summary/index.html" target="_blank">2014工作总结(html)</a></li>
+                    <li><a href="http://acking.github.io/writing/file/2013_summary_acking/index.html" target="_blank">2013年终总结(html)</a></li>
+                    <li><a href="http://acking.github.io/writing/file/2012_incumbents_reporting/2012_incumbents_reporting.pdf" target="_blank">2012述职报告(pdf)</a> </li>
+                    <li>2011年终总结 <a href="http://acking.github.io/writing/file/2011_summary/2011_summary_chenqi.pdf" target="_blank">(pdf)</a> / <a href="http://acking.github.io/writing/file/2011_summary/index.html" target="_blank">(html)-<i>需翻墙</i></a></li> 
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
