@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>科学上网－Acking</title>
+        <meta name="description" content="Science and the Internet">
+        <meta name="author" content="Acking">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if (window.location.search.match(/print-pdf/gi)) {
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="css/my.css">
+        <!--<script src="js/fullscreen.js
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';"></script>-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+            <section>
+                <section>
+                    <h1>科学上网</h1>
+                    <h3>&nbsp;</h3>
+                    <p>
+                        <small><a target="_blank" href="http://blog.acshow.net">陈琦 [acking]</a> / <a target="_blank" title="微博" href="http://weibo.com/w3c100">@w3c100</a></small>
+                    </p>
+                    <p>
+                        <small class="c-999">2015-01-30</small>
+                    </p>
+                </section>
+                <section  id="fragments">
+                    <h2>巅峰之作、经典回顾</h2>
+                    <img  class="fragment noborder" width="300" src="img/ps1.jpg" alt="ps">
+                    <img  class="fragment noborder" width="300" src="img/ps1.jpg" alt="ps">
+                    <img  class="fragment noborder" width="300" src="img/ps1.jpg" alt="ps">
+                </section>
+            </section>
+                
+                <section>
+                    <h2>什么是HOSTS文件</h2>
+                    <blockquote cite="http://zh.wikipedia.org/wiki/Hosts文件">
+&ldquo;
+hosts文件是一个用于储存计算机网络中各节点信息的计算机文件。这个文件负责将主机名映射到相应的IP地址。hosts文件通常用于补充或取代网络中DNS的功能。和DNS不同的是，计算机的用户可以直接对hosts文件进行控制。
+&rdquo;
+                    </blockquote>
+                    <p>
+                        <small><a target="_blank" href="http://zh.wikipedia.org/wiki/Hosts文件">传送门>></a></small>
+                    </p>                 
+                </section>
+                <section>
+                    <h3>hosts有什么用</h3>
+                    <p>
+                        <a class="image" href="http://acking.github.io/writing/file/science_and_the_internet/img/gfw.jpg" target="_blank">
+                            <img width="600" src="img/gfw.jpg" alt="翻墙">
+                        </a>
+                    </p>
+                    <p>
+                        <small>
+                        防火长城，也称中国防火墙或中国国家防火墙，指中华人民共和国政府在其管辖互联网内部建立的多套网络审查系统的总称，包括相关行政审查系统。其英文名称Great Firewall of China（与长城 Great Wall 相谐的效果），简写为Great Firewall，缩写GFW。随着使用的广泛，GFW已被用于动词，GFWed是指被防火长城所屏蔽。
+                        </small>
+                    </p>
+                </section>
+                <section>
+                    <h3>神奇的hosts</h3>
+                     <p>&nbsp;</p>
+                    <ul>
+                        <li>万恶的程序员为防止双十一 LP、女票淘宝购物，修改家里电脑或路由器hosts指向</li>
+                        <li>万恶的“黑客”制作钓鱼网站，获取淘宝、QQ等账号密码</li>
+                    </ul>
+                             
+                </section>
+                <section>
+                    <h3>修改属于自己的hosts文件</h3>
+                    <p>
+                        <small><a target="_blank" href="http://zh.wikipedia.org/wiki/Hosts文件">传送门>></a></small>
+                    </p>                 
+                </section>
+
+                <section>
+                    <h1>THE END</h1>
+                    <p>
+                        <small class="c-999">Thank you！</small>
+                    </p>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+        </script>
+    </body>
+</html>
