@@ -12,12 +12,12 @@ tags: [Linux, command]
 
 1、network
 利用root帐户
-# service network restart
+service network restart
 
 2、ifdown/ifup
-# ifdown eth0
-# ifup eth0
+ifdown eth0
+ifup eth0
 
 3、ifconfig
-# ifconfig eth0 down
-# ifconfig eth0 up
+ifconfig eth0 down
+ifconfig eth0 up
