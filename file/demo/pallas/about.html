@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>pallas</title>
+<meta name="keywords" content="[!--pagekey--]" />
+<meta name="description" content="[!--pagedes--]" />
+<link href="css/master.css" type="text/css" rel="stylesheet" />
+<link href="css/base.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("ul.ul-nav li").mouseover(function(){
+        // alert($(this).html());
+        $(this).children().next('.sub-ul-nav').show(600);
+    });
+    $("ul.ul-nav li").mouseleave(function(){
+        // alert($(this).html());
+        $(this).children().next('.sub-ul-nav').hide(200);
+    });
+
+});
+</script>
+
+<body>
+
+<!--头部-->
+<div class="head2">
+	<div class="head-box">
+        <div class="logo"><img src="images/logo.jpg" /></div>
+        <div class="nav">
+            <ul class="ul-nav">
+                <li>
+                    <a href="index.html">
+                        <dl><dt>首 页</dt><dd>Home</dd></dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <dl><dt>关于我们</dt><dd>About Us</dd></dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <dl><dt>新闻与资讯</dt><dd>News & Info</dd></dl>
+                    </a>
+                    <ul class="hide sub-ul-nav"><li><a href="#">站内信息</a> | <a href="#">行业信息</a></li></ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <dl><dt>品牌及产品</dt><dd>Brands & Products</dd></dl>
+                        <ul class="hide sub-ul-nav"><li>
+                            <a href="#">产品1</a> | 
+                            <a href="#">产品2</a> |
+                            <a href="#">产品3</a> | 
+                            <a href="#">产品4</a>
+                        </li></ul>
+
+                </li>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <dl><dt>工程案例</dt><dd>Pro case</dd></dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <dl><dt>下载专区</dt><dd>Download</dd></dl>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <dl><dt>联系我们</dt><dd>Contact us</dd></dl>
+                    </a>
+                </li>      
+                
+            </ul>
+            
+        
+            
+        </div>
+    </div>
+    
+</div>
+
+
+
+<div class="box-bg">&nbsp;</div>
+
+
+<!--首页主体-->
+
+    
+    <div class="clearfix ofHidden block yh pt20">
+    	<!-- <div class="wz">
+    		您所在的位置：<a href="#">首页</a> 》<span>关于我们</span>
+    	</div> -->
+        <div class="mian-abox">
+        	<div class="mian-abox-l">
+        		<div class="sidebar">
+        			<h1 class="s-title">关于我们 <span class="f16 c_888">ABOUT US</span></h1>
+        			<ul class="s-title-list">
+        				<li> 》<a href="#">公司简介</a></li>
+        				<li> 》<a href="#">公司资质</a></li>
+        				<li> 》<a href="#">组织架构</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="mian-abox-r">
+        		<div class="text">
+        			<!-- <h1 class="t1-title">关于我们</h1> -->
+        			<h3 class="t3-title">公司简介</h2>
+   					<p>香港雅典娜有限公司，2010 创立于香港，是一家专门从事装饰材料生产的香港公司，目前致力于高档墙布（丝绸提花有缝拼接）的生产和研发，代表着中国壁布的最顶级品质。 </p>
+   					<p>同时出口往国外装饰材料产品，与意大利、比利时，韩国等海外供应商保持良好的业务关系， 并远销海外，雅典娜，以推动行业发展为己任，致力于改善13亿国人的家居生活品质，在江浙沪已打造了优秀的品牌形象并累积了优良的客户服务经验。</p>
+   					<br>
+   					<h3 class="t3-title">公司资质</h2>
+   					<div><img width="730" src="images/zz.jpg" /></div>   			
+        		</div>
+        	</div>
+        </div>
+            	
+    </div>
+    
+        
+<div class="foot clearfix">
+	<div class="block">
+        <div class="fleft">
+            <p><a href="" class="a1">联系我们</a>|<a href="" class="a2">公司诚聘</a>|<a href="" class="a3">合作伙伴</a>|<a href="" class="a4">网站地图</a></p>
+            <p>Copyright © 2015 All Rights Reserved.</p>
+        </div>
+        
+        <div class="fright">
+        	<p class="p1">销售热线：021-51083311</p>
+            <p class="p2">邮箱：800030760@qq.com</p>
+        </div>
+    </div>
+</div>    
+
+<script src="js/all.js" type="text/javascript"></script>
+</body>
+</html>
