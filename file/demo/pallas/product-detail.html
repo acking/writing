@@ -57,6 +57,7 @@ $(document).ready(function(){
                             <a href="#">产品3</a> | 
                             <a href="#">产品4</a>
                         </li></ul>
+
                 </li>
 
                     </a>
@@ -88,7 +89,7 @@ $(document).ready(function(){
 
 
 
-<div class="box-bg bbg1">&nbsp;</div>
+<div class="box-bg bbg2">&nbsp;</div>
 
 
 <!--首页主体-->
@@ -99,25 +100,79 @@ $(document).ready(function(){
     		您所在的位置：<a href="#">首页</a> 》<span>关于我们</span>
     	</div> -->
         <div class="mian-abox">
-        	<div class="mian-abox-l">
-        		<div class="sidebar">
-        			<h1 class="s-title">关于我们 <span class="f16 c_888">ABOUT US</span></h1>
-        			<ul class="s-title-list">
-        				<li> 》<a href="#">公司简介</a></li>
-        				<li> 》<a href="#">公司资质</a></li>
-        				<li> 》<a href="#">组织架构</a></li>
-        			</ul>
-        		</div>
-        	</div>
-        	<div class="mian-abox-r">
-        		<div class="text">
-        			<!-- <h1 class="t1-title">关于我们</h1> -->
-        			<h3 class="t3-title">公司简介</h2>
-   					<p>香港雅典娜有限公司，2010 创立于香港，是一家专门从事装饰材料生产的香港公司，目前致力于高档墙布（丝绸提花有缝拼接）的生产和研发，代表着中国壁布的最顶级品质。 </p>
-   					<p>同时出口往国外装饰材料产品，与意大利、比利时，韩国等海外供应商保持良好的业务关系， 并远销海外，雅典娜，以推动行业发展为己任，致力于改善13亿国人的家居生活品质，在江浙沪已打造了优秀的品牌形象并累积了优良的客户服务经验。</p>
-   					<br>
-   					<h3 class="t3-title">公司资质</h2>
-   					<div><img width="730" src="images/zz.jpg" /></div>   			
+
+        	<div class="mian-abox-all">
+                <div class="nav-wz">首页 》品牌及产品 》纯正贵族 》详细</div>
+        		<div class="list">
+
+ 
+
+<div class="pic_list pic_list-l">
+    <ul class="clearfix">
+      <li>
+        <div class="photo yh"><img src="images/pro1.jpg" />
+          <p>Imperiale 伊佩利亚</p>
+        </div>
+        <div class="rsp"></div>
+        <div class="text"><a href="javascritp:;">
+          <h3>Imperiale 伊佩利亚</h3>
+          <p>《Imperiale/伊佩利亚》出自意大利Emiliana Parati集团顶级品牌ESEDRA...</p>
+          <div>《纯正贵族》</div>
+          </a></div>
+      </li>
+    </ul>
+</div>
+<div class="pro-text">
+	<h1 class="pro-text-t">Imperiale 伊佩利亚</h1>
+	<h4 class="pro-text-c"><span>纯正贵族</span></h4>
+	<div class="pro-text-tt">《Imperiale/伊佩利亚》出自意大利Emiliana Parati集团顶级品牌ESEDRA。设计师们深谙意大利文艺复兴时期的宫廷艺术，将其与意大利最传统的手工雕刻深压纹肌理工艺相结合，搭配金银、高级灰等色彩，拥有无可替代的细腻手工和卓越色彩。</div>
+</div>   
+    
+<div class="pro-pic">
+	
+
+<!--图片滚动-->
+<script type="text/javascript" src="js/picgd.js"></script>
+
+<div class="infopic">
+	<div class="picbox">
+		<ul class="gallery piclist">
+			<li><a href="images/pr1.jpg" rel="prettyPhoto[]"><img src="images/pr1.jpg" /></a></li>
+			<li><a href="images/pr2.jpg" rel="prettyPhoto[]"><img src="images/pr2.jpg" /></a></li>
+			<li><a href="images/pr3.jpg" rel="prettyPhoto[]"><img src="images/pr3.jpg" /></a></li>
+			<li><a href="images/pr4.jpg" rel="prettyPhoto[]"><img src="images/pr4.jpg" /></a></li>
+			<li><a href="images/pr5.jpg" rel="prettyPhoto[]"><img src="images/pr5.jpg" /></a></li>
+			<li><a href="images/pr6.jpg" rel="prettyPhoto[]"><img src="images/pr6.jpg" /></a></li>
+			<li><a href="images/pr7.jpg" rel="prettyPhoto[]"><img src="images/pr7.jpg" /></a></li>
+			<li><a href="images/pr8.jpg" rel="prettyPhoto[]"><img src="images/pr8.jpg" /></a></li>
+		</ul>
+	</div>
+	<div class="pic_prev"></div>
+	<div class="pic_next"></div>
+</div><!--infopic end-->
+
+
+
+<!-- 弹出层调用 -->
+
+<link type="text/css" href="css/prettyPhoto.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){	
+	$("area[rel^='prettyPhoto']").prettyPhoto();
+	$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+})
+</script>
+
+
+
+
+
+
+</div>
+
+
+
         		</div>
         	</div>
         </div>

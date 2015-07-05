@@ -50,9 +50,20 @@ jQuery(".team").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:
 		$(this).find(".text").animate({bottom:'-275'}, {duration: 0})
 	});
 
-
-
-
+// 下载添加密码
+function prom()
+{
+    var pwd=prompt("请输入密钥","");//将输入的内容赋给变量 pwd ，
+    //这里需要注意的是，prompt有两个参数，前面是提示的话，后面是当对话框出来后，在对话框里的默认值
+ 
+    if(pwd=="1234")//如果返回的有内容
+    {
+        alert("密钥正确");
+     }else{
+        alert("密钥错误");
+     }
+ 
+}
 
 
 

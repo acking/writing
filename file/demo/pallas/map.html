@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html {width: 730px;height: 500px;margin:0;font-family:"微软雅黑";}
+		#allmap{width:100%;height:500px;}
+		p{margin-left:5px; font-size:14px;}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cuvWnzhASSNdiRaKhPPEWlGB"></script>
+	<title>map</title>
+</head>
+<body>
+	<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var sContent =
+	"<h4 style='margin:0 0 5px 0;padding:0.2em 0'>香港雅典娜丝绸壁布有限公司</h4>" + 
+	"<img style='float:right;margin:4px' id='imgDemo' src='images/zz.jpg' width='139' height='104' title='香港雅典娜丝绸壁布有限公司'/>" + 
+	"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>香港雅典娜有限公司，2010 创立于香港，是一家专门从事装饰材料生产的香港公司，目前致力于高档墙布（丝绸提花有缝拼接）的生产和研发，代表着中国壁布的最顶级品质。<p>"
+	+
+	"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>同时出口往国外装饰材料产品，与意大利、比利时，韩国等海外供应商保持良好的业务关系， 并远销海外，雅典娜，以推动行业发展为己任，致力于改善13亿国人的家居生活品质，在江浙沪已打造了优秀的品牌形象并累积了优良的客户服务经验...</p>" + 
+	"</div>";
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(121.539931,31.228974);
+	var marker = new BMap.Marker(point);
+	var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+	map.centerAndZoom(point, 19);
+	map.addOverlay(marker);
+	marker.addEventListener("click", function(){          
+	   this.openInfoWindow(infoWindow);
+	   //图片加载完毕重绘infowindow
+	   document.getElementById('imgDemo').onload = function (){
+		   infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+	   }
+	});
+	var label = new BMap.Label("香港雅典娜丝绸壁布有限公司",{offset:new BMap.Size(20,-10)});
+	marker.setLabel(label);
+
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+
+	//添加放大缩小
+	var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+	var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+	map.addControl(top_left_control);        
+	map.addControl(top_left_navigation);     
+
+	//添加地图类型和缩略图
+	// var mapType1 = new BMap.MapTypeControl({mapTypes: [BMAP_NORMAL_MAP,BMAP_HYBRID_MAP]});
+	var mapType2 = new BMap.MapTypeControl({anchor: BMAP_ANCHOR_TOP_RIGHT});
+	var overView = new BMap.OverviewMapControl();
+	var overViewOpen = new BMap.OverviewMapControl({isOpen:true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT});
+	//添加地图类型和缩略图
+	// map.addControl(mapType1);          //2D图，卫星图
+	map.addControl(mapType2);          //左上角，默认地图控件
+	map.setCurrentCity("上海");        //由于有3D图，需要设置城市哦
+	map.addControl(overView);          //添加默认缩略地图控件
+	map.addControl(overViewOpen);      //右下角，打开
+
+
+
+</script>

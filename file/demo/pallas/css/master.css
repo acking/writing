@@ -220,6 +220,7 @@ table.webyy td{border:0;padding:8px 20px;word-break:break-all; word-wrap:break-w
 .list-boximg span { color:#efefef; height:26px; line-height:26px; padding:0 6px; position:absolute; font-size:12px; float:left; width:auto; }
 .list-boximg span.bgc1 {background:rgba(255,0,0,0.6);}
 .list-boximg span.bgc2 {background:rgba(0,102,204,0.6);}
+.list-boximg span.bgc3 {background:rgba(255,180,0,0.6);}
 
 .list-boxtext { width:530px; margin-top:10px; float:right;}
 .list-boxtext h1.listtitle { color:#999; line-height:24px; font-size:20px;}
@@ -251,3 +252,35 @@ h3.t3-title { text-align:left; color:#f1f1f1; padding:2px 0; margin-bottom:5px;}
 }
 .bbg1 {background: url("../images/b6.jpg") 50% 50% no-repeat;}
 .bbg2 {background: url("../images/b5.jpg") 50% 50% no-repeat;}
+
+ul.pro-class-ul { margin-top:10px;}
+ul.pro-class-ul li{ float:left; margin-right:10px; }
+ul.pro-class-ul li a { display:block; background:#000; color:#fff; height:22px; padding:5px 15px; line-height:22px; border-radius:22px;}
+ul.pro-class-ul li a:hover {background:#f1f1f1; color:#000; text-decoration:none;}
+
+.pic_list-l { width:310px; height:275px; overflow:hidden; float:left;}
+.pro-text { width:600px;height:275px; overflow:hidden; float:left; margin-left:22px; display:inline; margin-top:20px;}
+.pro-pic { clear:both; height:200px; margin-bottom:30px; background:rgba(0,0,0,0.1);}
+
+h1.pro-text-t { color:#fff;}
+h4.pro-text-c { color:#999; font-weight:200; margin-top:6px;}
+h4.pro-text-c span { height:20px; font-size:14px; line-height:20px; padding:5px 15px; background:#000; color:#555; border-radius:20px;}
+.pro-text-tt { color:#f1f1f1; clear:both; font-size:16px; margin-top:12px; line-height:30px;}
+
+/* infopic */
+.infopic{width:1000px;height:200px;position:relative;overflow:hidden;margin:15px auto;}
+.piclist{height:200px;position:absolute;top:0;left:0;}
+.piclist li{height:200px;margin-right:15px;float:left;overflow:hidden;}
+.piclist li img{height:200px;}
+.pic_prev,.pic_next{width:30px;height:50px;background:url(../images/icon.png) no-repeat;position:absolute;top:75px;cursor:pointer;}
+.pic_prev{background-position:0 0;left:0;}
+.pic_next{background-position:0 -60px;right:0;}
+
+/* download */
+ul.down-list-ul li { height:30px; line-height:30px;border-bottom:1px dotted #fff; margin:10px 0;}
+ul.down-list-ul li h1 { color:#fff; font-size:14px;}
+ul.down-list-ul li h1 img { float:left;}
+ul.down-list-ul li h1 span {float:left; height:30px; overflow:hidden; line-height:30px; width:600px; }
+ul.down-list-ul li h1 a { float:right; text-align:right; color:#999; width:100px; }
+ul.down-list-ul li h1 a:hover { color:#fff; }
+
