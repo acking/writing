@@ -226,7 +226,7 @@ table.webyy td{border:0;padding:8px 20px;word-break:break-all; word-wrap:break-w
 .list-boxtext h1.listtitle { color:#999; line-height:24px; font-size:20px;}
 .list-boxtext h1.listtitle a { color:#000;}
 .list-boxtext h1.listtitle a:hover { color:#000; text-decoration:none;}
-.listinfo { color:#f40; margin-top:8px; margin-bottom:2px;}
+.listinfo { color:#600; margin-top:8px; margin-bottom:2px;}
 .listtext { color:#999; height:60px; margin-bottom:2px; overflow:hidden;}
 a.ydxx { float:right; font-size:14px;}
 h1.new-title { /*border-bottom:1px dotted #999; */text-align:center; margin:8px 0; padding:12px 2px; color:#fff; font-weight:700; font-size:22px;}
