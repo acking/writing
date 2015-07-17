@@ -137,11 +137,11 @@ The MyISAM, MERGE, MEMORY, and CSV engines are mandatory (always compiled into t
 
 修改mysql安装目录
 cd /usr/local/mysql   
-chown -R mysql:mysql
+chown -R mysql:mysql .
 
 
 ###4.配置mysql 5.6.22
-cp /usr/loacl/mysql/support-files/my-default.cnf etc/my.cnf
+cp /usr/loacl/mysql/support-files/my-default.cnf /etc/my.cnf
 vim /etc/my.cnf
 修改my.cnf配置，把innodb相关选项前面的#去掉，大概在115-130行之间。
 
@@ -158,6 +158,7 @@ mysql的设置
 弹出输入password的提示，直接回车。
 设置密码：
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');
+
 quit;
 删除root密码为空的记录
 /usr/local/mysql/bin/mysql -uroot -p123456 -S /tmp/mysqld.sock
