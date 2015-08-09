@@ -1,0 +1,5 @@
+* { margin:0; padding:0;}
+
+/**主页**/
+body { background:url("../images/bg.jpg") ;}
+.box { width:100%; margin:0 auto; text-align:center;}

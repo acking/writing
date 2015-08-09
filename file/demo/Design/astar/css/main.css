@@ -1,0 +1,11 @@
+* { margin:0; padding:0;}
+ul,ol,li { list-style:none;}
+p,h1,h2,th,td { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+/**主页**/
+.aisida { width:100%;}
+.top { widows:100%; background:url(../img/top_di.jpg) repeat-x;}
+.top-nr { width:1024px; margin:0 auto;}
+.main { width:1024px; margin:0 auto; margin-top:10px;}
+.bottom { widows:100%; background:url(../img/ditu.jpg) repeat-x;}
+.bottom-nr { width:1024px; margin:0 auto;}
