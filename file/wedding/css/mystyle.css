@@ -78,9 +78,11 @@ body { background:#eee;}
 .w-love1 h2 { color:#696262; font-family: 'Chopinscript', serif;}
 .chapter-pic { border:1px solid #000; margin:.5em; margin-top:0; padding:.2em;}
 .w-love1-1 { background:#fff; padding:1em;}
-.dream { padding-bottom:4em;}
+.dream { padding:1em;}
 .w-dream-1 { background:#fff;}
 img.w-xu { border-radius:2px; border:1px solid #000; padding:0.2em; margin:0.8em auto 0.5em auto;}
+.w-end { padding-bottom:4em;}
+.w-end .mp3 { margin:0.5em auto;}
 .footer {
 	position:fixed;
 	bottom: 0;
