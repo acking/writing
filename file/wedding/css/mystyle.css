@@ -6,6 +6,7 @@
   src: local('Chopinscript'), url(../font/ChopinScript.otf);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+.Chopinscript {font-family: 'Chopinscript', serif;}
 h1,h2,h3,h4,h5,h6,img { margin:0}
 a { color:#333;text-decoration:none;}
 body { background:#eee;}
