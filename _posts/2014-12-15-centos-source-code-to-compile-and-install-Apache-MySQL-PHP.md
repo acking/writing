@@ -162,6 +162,7 @@ SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');
 quit;
 删除root密码为空的记录
 /usr/local/mysql/bin/mysql -uroot -p123456 -S /tmp/mysqld.sock
+
 use mysql;
 delete from user where password='';
 flush privileges;
