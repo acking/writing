@@ -10,6 +10,7 @@
 h1,h2,h3,h4,h5,h6,img { margin:0}
 a { color:#333;text-decoration:none;}
 body { background:#eee;}
+.bg-eee {background:#eee;}
 .center { text-align:center;}
 #index-bg{
 	 background: #eee url("../img/bg@2x.6.min.jpg") center center fixed no-repeat;
@@ -84,6 +85,12 @@ img.w-xu { border-radius:2px; border:1px solid #000; padding:0.2em; margin:0.8em
 .w-end { padding-bottom:4em;}
 .w-end .mp3 { margin:0.5em auto;}
 .blessings { padding:1em; margin-bottom:3em; background:#fff;}
+.w-cfz { font-size:1em; line-height:2em;}
+.w-rmb { background:#eee; padding:2em; padding-top:0; text-align:center;}
+.w-rmb .rmb-pic img { margin:0.5em auto;}
+.w-hb {background:#fff; }
+.w-hb h4 { padding:0.5em; margin-top:0.2em; background:#eee;}
+.w-hb h3 { line-height:3em;}
 .footer {
 	position:fixed;
 	bottom: 0;
