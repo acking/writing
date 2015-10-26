@@ -83,6 +83,7 @@ body { background:#eee;}
 img.w-xu { border-radius:2px; border:1px solid #000; padding:0.2em; margin:0.8em auto 0.5em auto;}
 .w-end { padding-bottom:4em;}
 .w-end .mp3 { margin:0.5em auto;}
+.blessings { padding:1em; margin-bottom:2em; background:#fff;}
 .footer {
 	position:fixed;
 	bottom: 0;
@@ -92,6 +93,7 @@ img.w-xu { border-radius:2px; border:1px solid #000; padding:0.2em; margin:0.8em
 	background:#5E3F3F;
 	clear:both;
 	color:#fff;
+	z-index:100;
 }
 .footer a { color:#fff; display:block; background:#ae8888;}
 .footer a:hover { color:#fff; background:#5E3F3F;}
