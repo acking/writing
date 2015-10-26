@@ -65,7 +65,7 @@ body { background:#eee;}
 .index-main #times span.s3 { color:#f1ee00; font-size:2em;}
 .index-main #times span.s4 { color:#00a532; font-size:1.2em;}
 .index-main .detail { margin-top:3em;}
-
+.detail a{ text-decoration:underline;}
 
 .header { height:auto; text-align:center; padding:.5em; background:#fff; border-top:2px solid #000;}
 .header h1 { font-size:2.2em; color:#5E3F3F; line-height:1.5em; font-family:"\5FAE\8F6F\96C5\9ED1";}
