@@ -1,4 +1,5 @@
 /*hdp*/
+ul,li { list-style-type: none;}
 .fullwidthbanner-container{
 	width:100% !important;
 	position:relative;
