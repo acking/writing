@@ -4,13 +4,13 @@ ul,li { list-style-type: none;}
 	width:100% !important;
 	position:relative;
 	padding:0;
-	max-height:450px !important;
+	max-height:500px !important;
 	overflow:hidden;
 }
 
 .fullwidthbanner-container .fullwidthabnner	{
 	width:100% !important;
-	max-height:450px !important;
+	max-height:550px !important;
 	position:relative;
 }
 
