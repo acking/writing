@@ -13,4 +13,4 @@ function ShowCountDown(year,month,day,divname)
 	var cc = document.getElementById(divname); 
 	cc.innerHTML = "倒计时：<span class='s1'>"+day1+"天</span><span class='s2'>"+hour+"小时</span><span class='s3'>"+minute+"分</span><span class='s4'>"+second+"秒</span>"; 
 } 
-window.setInterval(function(){ShowCountDown(2016,1,9,'times');}, interval); 
+window.setInterval(function(){ShowCountDown(2016,1,9,'times');}, interval);
