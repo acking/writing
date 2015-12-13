@@ -102,7 +102,7 @@ service httpd start
 /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 /sbin/iptables -I INPUT -p tcp --dport 443 -j ACCEPT
 /etc/init.d/iptables save               ##保存配置
-/etc/init.d/iptable restart             ##重启防火墙 
+/etc/init.d/iptables restart             ##重启防火墙 
 
 到此。Apache的设置基本完成。
 
