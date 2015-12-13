@@ -1,1 +1,0 @@
-DELETE FROM table1 WHERE 1;
