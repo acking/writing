@@ -89,7 +89,7 @@ body { background:#eee;}
 .w-love1 { padding:1em;}
 .w-love1 h1 { color:#5E3F3F; font-family:'Cinzel',serif;}
 .w-love1 h2 { color:#696262; font-family: 'Chopinscript', serif;}
-.chapter-pic { border:1px solid #000; margin:.5em; margin-top:0; padding:.2em;}
+.chapter-pic { border:1px solid #000; margin:.5em; margin-top:0; padding:.2em; float:right;}
 .w-love1-1 { background:#fff; padding:1em;}
 .dream { padding:1em;}
 .w-dream-1 { background:#fff;}
@@ -121,6 +121,6 @@ span#uyan-copyright { display: none;}
 .welcome { background:#fff; border-bottom:1px dotted #ae8888;}
 .welcome h3 {color:#E71B64;}
 h1.red,h2.red { color:#f00;}
-.wumii-main-nav,.wumii-top-menu { display: none;}
+.wumii-main-nav { display: none;} /*,.wumii-top-menu */
 #wumiiCommentFormWrapper,#wumiiMainNavAnimate { border: none;}
 .wumii-comment .wumii-comment-div .wumii-footer,.wumii-weiboInfo-wrapper { display: none;}
