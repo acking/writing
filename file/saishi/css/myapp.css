@@ -31,15 +31,7 @@
 	left: auto;
 	right: 6px;
 }
-p {
-	text-indent: 22px;
-}
-span.mui-icon {
-	font-size: 14px;
-	color: #007aff;
-	margin-left: -15px;
-	padding-right: 10px;
-}
+
 .mui-popover {
 	min-height: 60px;
 }
