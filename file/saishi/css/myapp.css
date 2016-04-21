@@ -204,7 +204,7 @@ p img {
 .myapp-baoming-btn { position: absolute; z-index:1; bottom:15px; right:15px;}
 .mui-table-view:before,.mui-table-view:after { height:0;}
 .mui-table-view.mui-grid-view.myapp-table { margin:5px; margin-left:10px; width:auto; background:#efeff4;}
-.myapp-table p.myapp-title-p { font-size:12px;;}
+.myapp-table p.myapp-title-p { font-size:12px;}
 .mui-table-view.mui-grid-view.myapp-table .mui-table-view-cell { background:#fff; padding:3px;}
 .mui-table-view.mui-grid-view.myapp-table .mui-table-view-cell>a:not(.mui-btn){  margin:4px;}
 .mui-table-view.mui-grid-view .mui-table-view-cell .myapp-title { text-align:left; font-size:16px; margin-bottom:2px; margin-top:3px; color:#000; line-height:15px; height:15px; white-space: pre-wrap;}
@@ -268,6 +268,22 @@ p.myapp-saishi-p { font-size:12px; line-height:14px; color:#333;}
 .myapp-bottom-saishicj { height:60px;}
 input.myapp-serch-in { margin:0; padding:2px 6px; margin-top:10px; margin-left:10px; width:60%; float:left;}
 .mui-bar .bm-btn-ckcj { height:38px; font-style:16px; padding-left:2em; padding-right:2em; float:left; margin-top:3px; margin-left:6px;}
+/*saishi_rules*/
+.mui-content>.myapp-zc:first-child { margin-top:0;}
+.myapp-zhangcheng { margin-top:6px; width:100%; background:#fff; padding:10px;}
+.myapp-zc-title { padding:6px 0 3px 0; font-size:18px; line-height:18px; color:#f60;}
+.myapp-zc-title span.iconfont { margin-right:10px;}
+.myapp-zc-text { margin-left:32px;}
+.myapp-zhangcheng-list { margin-bottom:6px; overflow:hidden;}
+.myapp-title {font-weight:700; font-size:16px; color:#000;}
+
+
+
+
+
+
+
+
 
 
 
