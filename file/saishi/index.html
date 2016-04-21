@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>比赛活动列表</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/myiconfont.css" />
+    <link href="css/myapp.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-icon mui-pull-left">logo</a>
+		<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+	</header>
+	<!--底部导航 start-->
+	<nav class="mui-bar mui-bar-tab myapp-bottom">
+		<a class="mui-tab-item mui-active" href="#">
+			<span class="mui-icon iconfont">&#xe600;</span>
+			<span class="mui-tab-label">比赛\活动</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-chat">
+			<span class="mui-icon iconfont">&#xe603;</span>
+			<span class="mui-tab-label">文章\相册</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-map">
+			<span class="mui-icon iconfont">&#xe601</span>
+			<span class="mui-tab-label">个人中心</span>
+		</a>
+	</nav>
+	<!--底部导航end-->
+	<div class="mui-content">
+	    <!--图片轮播start-->
+	    <div id="slider" class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/yuantiao.jpg">
+						<p class="mui-slider-title">静静看这世界</p>
+					</a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/shuijiao.jpg">
+						<p class="mui-slider-title">澳大利亚黄金海岸马拉松</p>
+					</a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/muwu.jpg">
+						<p class="mui-slider-title">想要一间这样的木屋，静静的喝咖啡</p>
+					</a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/cbd.jpg">
+						<p class="mui-slider-title">Color of SIP CBD</p>
+					</a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/yuantiao.jpg">
+						<p class="mui-slider-title">静静看这世界</p>
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/shuijiao.jpg">
+						<p class="mui-slider-title">澳大利亚黄金海岸马拉松</p>
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator mui-text-right">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+	    <!--图片轮播end-->
+	    <!--特别推荐start-->
+	    <ul class="mui-table-view myapp-tuijian">
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
+					<div class="mui-media-body">
+						<p class="myapp-title">香川丸龟半程马拉松香川丸龟半程马拉松</p>
+						<p class='mui-ellipsis'>日本 香川县 丸龟市 </p>
+						<p class='mui-ellipsis'>2015-12-26 </p>
+					</div>
+					<div class="myapp-baoming-btn"><button type="button" class="mui-btn mui-btn-redff3f34">报名</button></div>
+				</a>
+			</li>
+		</ul>
+	    <!--特别推荐end-->
+	    <!--项目列表start-->
+	    <ul class="mui-table-view mui-grid-view myapp-table">
+	        <li class="mui-table-view-cell mui-media mui-col-xs-6 myapp-mr2">
+	            <a href="#">
+	                <img class="mui-media-object" src="images/shuijiao.jpg">
+	                <div class="mui-media-body myapp-title">南半球首个金标赛事南半球首个金标赛事南半球首个金标赛事南半球首个金标赛事——</div>
+	                <div class="mui-media-body myapp-title-sub">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	            		<p class="myapp-title-p"><span class="myapp-date-left">2016-07-12</span><span class="myapp-addrss-right">昆士兰黄金海岸</span></p>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media mui-col-xs-6 myapp-ml2">
+	            <a href="#">
+	                <img class="mui-media-object" src="images/shuijiao.jpg">
+	                <div class="mui-media-body myapp-title">幸福可以一起睡觉</div>
+	                <div class="mui-media-body myapp-title-sub">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	            		<p class="myapp-title-p"><span class="myapp-date-left">2016-07-12</span><span class="myapp-addrss-right">昆士兰黄金海岸</span></p>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media mui-col-xs-6 myapp-mr2">
+	            <a href="#">
+	                <img class="mui-media-object" src="images/shuijiao.jpg">
+	                <div class="mui-media-body myapp-title">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	                <div class="mui-media-body myapp-title-sub">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	            		<p class="myapp-title-p"><span class="myapp-date-left">2016-07-12</span><span class="myapp-addrss-right">昆士兰黄金海岸</span></p>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media mui-col-xs-6 myapp-ml2">
+	            <a href="#">
+	                <img class="mui-media-object" src="images/shuijiao.jpg">
+	                <div class="mui-media-body myapp-title">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	                <div class="mui-media-body myapp-title-sub">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	            		<p class="myapp-title-p"><span class="myapp-date-left">2016-07-12</span><span class="myapp-addrss-right">昆士兰黄金海岸</span></p>
+	            </a>
+	        </li>
+	        <li class="mui-table-view-cell mui-media mui-col-xs-6 myapp-mr2">
+	            <a href="#">
+	                <img class="mui-media-object" src="images/shuijiao.jpg">
+	                <div class="mui-media-body myapp-title">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	                <div class="mui-media-body myapp-title-sub">幸福就是可以一起睡觉幸福就是可以一起睡觉幸福就是可以一起睡觉</div>
+	            		<p class="myapp-title-p"><span class="myapp-date-left">2016-07-12</span><span class="myapp-addrss-right">昆士兰黄金海岸</span></p>
+	            </a>
+	        </li>
+	        
+	    </ul> 
+	    <!--项目列表end-->
+	</div>
+	
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		mui(".mui-table-view").on('tap','.mui-table-view-cell',function(){
+		  //打开新闻详情
+		  mui.openWindow({
+		    url:'select_site.html'
+		  });
+		}) 
+    </script>
+</body>
+</html>

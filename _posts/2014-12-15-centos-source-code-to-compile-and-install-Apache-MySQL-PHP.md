@@ -190,7 +190,7 @@ tags: [CentOS, WEB]
 	编辑apxs，把#!/replace/with/path/to/perl/interpreter -w 这一行（一般是第一行）更改为"#!/usr/bin/perl -w"。
 	注意：如果没有改，编译的时候会出现了“Sorry, I cannot run apxs”的错误提示。因为没有指明正确的perl执行程序的位置。
 	cd php-5.6.3
-	./configure --prefix=/usr/local/php --with-apxs2=/usr/local/apache/bin/apxs --with-libxml-dir=/usr/include/libxml2 --with-config-file-path=/usr/local/apache/conf --with-mysql=/usr/local/mysql --with-mysqli=/usr/local/mysql/bin/mysql_config --with-gd --enable-gd-native-ttf --with-zlib --with-mcrypt --with-pdo-mysql=/usr/local/mysql --enable-shmop --enable-soap --enable-sockets --enable-wddx --enable-zip --with-xmlrpc --enable-fpm --enable-mbstring --with-zlib-dir --with-bz2 --with-curl --enable-exif --enable-ftp --with-jpeg-dir=/usr/lib --with-png-dir=/usr/lib --with-freetype-dir=/usr/lib/
+	./configure --prefix=/usr/local/php --with-apxs2=/usr/local/apache/bin/apxs --with-libxml-dir=/usr/include/libxml2 --with-config-file-path=/usr/local/apache/conf --with-mysql=/usr/local/mysql --with-mysqli=/usr/local/mysql/bin/mysql_config --with-gd --enable-gd-native-ttf --with-zlib --with-mcrypt --with-pdo-mysql=/usr/local/mysql --enable-shmop --enable-soap --enable-sockets --enable-wddx --enable-zip --with-xmlrpc --enable-fpm --enable-mbstring --with-zlib-dir --with-bz2 --with-curl --enable-exif --enable-ftp --with-jpeg-dir=/usr/lib --with-png-dir=/usr/lib --with-freetype-dir=/usr/lib/ --enable-bcmath
 	make && make install
 	php配置，编译安装时我的php.ini文件目录指向/usr/local/apache/conf
 	cd php-5.6.3
