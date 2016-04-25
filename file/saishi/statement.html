@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>参赛申明</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/myiconfont.css" />
+    <link href="css/myapp.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+		<h1 class="mui-title">深圳大鹏新年马拉松</h1>
+	</header>
+
+	<div class="mui-content">
+	 	<!--项目start-->   
+	 	<ul class="mui-table-view myapp-project">
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left myapp-radius8" src="images/shuijiao.jpg">
+					<div class="mui-media-body">
+						<p class="myapp-title">深圳大松深圳大鹏年马拉松深圳大鹏新年马拉松 Dapeng New Year </p>
+						<p class='mui-ellipsis c-3364fe'>全程马拉松 </p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	 	<!--项目end-->
+	    
+	    <!--富文本start-->
+	    <div class="myapp-content">
+		    <div class="mui-content-padded">
+				<p>这是图片放大预览示例，点击如下图片体验全屏预览功能</p>
+				<p>
+					<img src="images/yuantiao.jpg" data-preview-src="" data-preview-group="1" />
+				</p>
+				<p>图片全屏后，双击或双指缩放均可对图片进行放大、缩小操作，左右滑动可查看同组(data-preview-group相同的图片为一组)其它图片，点击会关闭预览</p>
+				<p>
+					<img src="images/muwu.jpg" data-preview-src="" data-preview-group="1" />
+				</p>
+				<p>第三张图片，纯粹为了占位： </p>
+				<p>
+					<img src="images/shuijiao.jpg" data-preview-src="" data-preview-group="1" />
+				</p>
+			</div>
+		</div>
+	    <!--富文本end-->
+	</div>
+	
+	<script src="js/mui.zoom.js"></script>
+	<script src="js/mui.previewimage.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui(".myapp-pro").on('tap','.myapp-pro-list',function(){
+		  //打开新闻详情
+		  mui.openWindow({
+		    url:'saishi_detail.html'
+		  });
+		}) 
+      	mui.previewImage();
+    </script>
+</body>
+</html>

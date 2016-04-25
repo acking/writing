@@ -189,6 +189,7 @@ p img {
 }
 /*图片预览*/
 .c-3364fe { color:#3364fe;} /*蓝色*/
+.c-f60 { color:#f60;} /*橙色*/
 .mui-bar-tab~.mui-content { padding-bottom:60px;}
 .myapp-bottom { height:60px;}
 .myapp-tuijian { margin:6px 0;}
@@ -276,9 +277,15 @@ input.myapp-serch-in { margin:0; padding:2px 6px; margin-top:10px; margin-left:1
 .myapp-zc-text { margin-left:32px;}
 .myapp-zhangcheng-list { margin-bottom:6px; overflow:hidden;}
 .myapp-title {font-weight:700; font-size:16px; color:#000;}
-
-
-
+.myapp-tongdao .myapp-saishi-title { margin-top:-5px; color:#000; font-size:14px;}
+p.c-f60 { color:#f60;}
+.myapp-list-tongdao {margin-top: 6px;
+    padding: 2px 0;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+}
+.mui-content>.mui-table-view:first-child { margin-top:0;}
 
 
 

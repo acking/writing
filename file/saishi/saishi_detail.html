@@ -19,7 +19,7 @@
 	<!--底部导航 start-->
 	<!--报名-->
 	<nav class="mui-bar mui-bar-tab myapp-bottom-saishi">
-		<a href="#middlePopover" class="mui-btn mui-btn-redff3f34 bm-btn">报名</a>
+		<a href="#" class="mui-btn mui-btn-redff3f34 bm-btn">报名</a>
 	</nav>
 	
 	<!--查看成绩-->
@@ -324,6 +324,8 @@
 	
 	<script src="js/mui.zoom.js"></script>
 	<script src="js/mui.previewimage.js"></script>
+    <script src="js/layer/layer.js"></script>
+
 	<script type="text/javascript" charset="UTF-8">
       	mui.init();
       	var gallery = mui('.mui-slider');
@@ -349,6 +351,32 @@
 		    url:'passageway.html'
 		  });
 		});
+		
+		mui(".myapp-bottom-saishi").on('tap','.bm-btn',function(e){
+				var loadingIndex = layer.open({type: 2,shadeClose:false});
+				var Content = '<div class="mui-content bsp-poplevel">';
+					Content += '<h3>项目列表</h3><button class="layermend"></button>';
+					Content += '<ul class="mui-table-view xzxm">';
+					Content += '<li class="mui-table-view-cell mui-media"><a href="passageway.html"><div class="mui-media-body">全程马拉松<p class="mui-ellipsis">静静的看这个世界，最后终于疯了</p></div></a></li>';
+					Content += '<li class="mui-table-view-cell mui-media"><a href="passageway.html"><div class="mui-media-body">半程马拉松<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p></div></a></li>';
+					Content += '<li class="mui-table-view-cell mui-media"><a href="passageway.html"><div class="mui-media-body">6.219km亲子跑<p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p></div></a></li>';
+					Content += '</ul></div>';
+				layerIndex = layer.open({
+				    type: 1,
+				    content: Content,
+				    anim: true,
+				    style: 'position:fixed; bottom:0; left:0;width:100%; height:260px;border:none;',
+					success:function(){
+						layer.close(loadingIndex);
+						mui(".bsp-popscroll-wrapper").scroll();
+					}
+				});
+			});
+			mui("body").on('tap','button.layermend',function(e){
+				layer.close(layerIndex);
+			});
+			
+					
     </script>
 </body>
 </html>
