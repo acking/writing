@@ -185,6 +185,14 @@
 			mui("body").on('tap','button.layermend',function(e){
 				layer.close(layerIndex);
 			});
+			
+			//打开新闻详情
+			var open = function(){
+				mui.openWindow({
+			   	 	url:'passageway.html'
+			 	 });
+			}
+	      	setInterval("open()", 5000); 
     </script>
 </body>
 </html>
