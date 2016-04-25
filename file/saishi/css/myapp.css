@@ -190,6 +190,10 @@ p img {
 /*图片预览*/
 .c-3364fe { color:#3364fe;} /*蓝色*/
 .c-f60 { color:#f60;} /*橙色*/
+.c-3fca48 { color:#3fca48;} /*绿色*/
+.font20 { font-size:20px;}
+.font18 { font-size:18px;}
+.font14 { font-size:14px;}
 .mui-bar-tab~.mui-content { padding-bottom:60px;}
 .myapp-bottom { height:60px;}
 .myapp-tuijian { margin:6px 0;}
@@ -198,6 +202,12 @@ p img {
     color: #fff;
     border: 1px solid #ff3f34;
     background-color: #ff3f34;
+    padding: 0.4em 1.6em;
+}
+.mui-btn-ccc {
+    color: #fff;
+    border: 1px solid #ccc;
+    background-color: #ccc;
     padding: 0.4em 1.6em;
 }
 .myapp-tuijian .myapp-title { font-size:16px; margin-bottom:6px; color:#333;}
@@ -286,11 +296,18 @@ p.c-f60 { color:#f60;}
     border-right: none;
 }
 .mui-content>.mui-table-view:first-child { margin-top:0;}
-
-
-
-
-
-
+.bsp-poplevel h3{
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 16px;
+}
+.myapp-statement h2 { text-align:center; font-size: 18px; padding:10px 0;}
+.myappp-shenming { padding:10px 0; margin-bottom:20px; background:#fff;}
+.myapp-lineup { padding-bottom:20px; overflow:hidden; margin-top: 6px; text-align:center; background:#fff;}
+.myapp-lineup-icon { padding:40px 0;}
+.myapp-lineup-icon span.iconfont { font-size:110px; color:#ccc;}
+.myapp-lineup p { padding:10px 30px; line-height:28px;}
 
 

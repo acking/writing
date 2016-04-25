@@ -16,6 +16,21 @@
 		<h1 class="mui-title">深圳大鹏新年马拉松</h1>
 	</header>
 
+	<!--底部导航 start-->
+	<!--报名-->
+	<!--<nav class="mui-bar mui-bar-tab myapp-bottom-saishi">
+		<a href="#" class="mui-btn mui-btn-redff3f34 bm-btn">下一步</a>
+	</nav>-->
+	
+	<!--报名邀请码-->
+	<nav class="mui-bar mui-bar-tab myapp-bottom-saishicj">
+		<div class="myapp-ckcj">
+			<input type="text" placeholder="输入报名邀请码" class="mui-input myapp-serch-in">
+			<button id="on-btn" type="button" class="mui-btn mui-btn-ccc bm-btn-ckcj">下一步</button>
+		</div>
+	</nav>
+	<!--底部导航end-->
+
 	<div class="mui-content">
 	 	<!--项目start-->   
 	 	<ul class="mui-table-view myapp-project">
@@ -30,38 +45,51 @@
 			</li>
 		</ul>
 	 	<!--项目end-->
-	    
 	    <!--富文本start-->
 	    <div class="myapp-content">
-		    <div class="mui-content-padded">
+		    <div class="mui-content-padded myapp-statement">
+		    		<h2>参赛申明</h2>
 				<p>这是图片放大预览示例，点击如下图片体验全屏预览功能</p>
 				<p>
 					<img src="images/yuantiao.jpg" data-preview-src="" data-preview-group="1" />
 				</p>
 				<p>图片全屏后，双击或双指缩放均可对图片进行放大、缩小操作，左右滑动可查看同组(data-preview-group相同的图片为一组)其它图片，点击会关闭预览</p>
-				<p>
-					<img src="images/muwu.jpg" data-preview-src="" data-preview-group="1" />
-				</p>
-				<p>第三张图片，纯粹为了占位： </p>
-				<p>
-					<img src="images/shuijiao.jpg" data-preview-src="" data-preview-group="1" />
-				</p>
 			</div>
 		</div>
 	    <!--富文本end-->
+	    <!--同意start-->
+	    <div class="myappp-shenming">
+		    <div class="mui-input-row mui-checkbox mui-left">
+				<label>同意《参赛申明》</label>
+				<input name="checkbox" value="Item 1" type="checkbox" >
+			</div>
+		</div>
+	    <!--同意end-->
 	</div>
 	
 	<script src="js/mui.zoom.js"></script>
 	<script src="js/mui.previewimage.js"></script>
 	<script type="text/javascript" charset="UTF-8">
       	mui.init();
-      	mui(".myapp-pro").on('tap','.myapp-pro-list',function(){
+      	mui(".mui-bar").on('tap','.mui-btn-redff3f34',function(){
 		  //打开新闻详情
 		  mui.openWindow({
-		    url:'saishi_detail.html'
+		    url:'line_up.html'
 		  });
 		}) 
       	mui.previewImage();
+      	mui('.mui-checkbox').on('change', 'input', function() {
+			var value = this.checked?"true":"false";
+			var onbtn = document.getElementById('on-btn');
+			if(value == 'true'){
+				onbtn.classList.add('mui-btn-redff3f34');
+				onbtn.classList.remove('mui-btn-ccc');
+			}else{
+				onbtn.classList.remove('mui-btn-redff3f34');
+				onbtn.classList.add('mui-btn-ccc');				
+			}
+		});
+		
     </script>
 </body>
 </html>

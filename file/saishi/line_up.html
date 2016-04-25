@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>排队</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/myiconfont.css" />
+    <link href="css/myapp.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">排队</h1>
+	</header>
+
+	<div class="mui-content">
+	 	<!--项目start-->   
+	 	<ul class="mui-table-view myapp-project">
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left myapp-radius8" src="images/shuijiao.jpg">
+					<div class="mui-media-body">
+						<p class="myapp-title">深圳大松深圳大鹏年马拉松深圳大鹏新年马拉松 Dapeng New Year </p>
+						<p class='mui-ellipsis c-3364fe'>全程马拉松 </p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	 	<!--项目end-->
+	    <!--排队计时start-->
+	    <div class="myapp-lineup">
+	    		<div class="myapp-lineup-icon">
+	    			<span class="mui-icon iconfont">&#xe61b;</span>
+			</div>
+			<p class="c-f60 font20">在您之前还有5位运动者正在报名中预计等待时间3分钟</p>
+			<p class="c-3fca48 font14">请勿离开页面，耐性等待...</p>
+	    </div>
+	    <!--排队计时end-->
+	</div>
+	
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+		
+		//打开新闻详情
+		var open = function(){
+			mui.openWindow({
+		   	 	url:'choose_friend.html'
+		 	 });
+		}
+      	setInterval("open()", 5000); 
+		
+    </script>
+</body>
+</html>
