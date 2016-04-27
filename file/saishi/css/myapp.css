@@ -330,7 +330,7 @@ p.c-f60 { color:#f60;}
 .qhxm-po { position:absolute; font-size:12px; padding:2px 4px; right:20px;}
 .myapp-add-pengyou { margin-top:6px; padding-bottom:0px;}
 .tjbtn { padding:30px; text-align:center;}
-.tjbtn .tjbutton { padding:0.8em 8em; font-size:1em;}
+.tjbtn .tjbutton { padding:0.8em 7.5em; font-size:16px;}
 /*supplement_list*/
 .myapp-people-ul { overflow:hidden; list-style: none; padding:0; margin:0; margin-left:6px; margin-top:2px;}
 .myapp-people-ul li { float:left; padding:3px;}
