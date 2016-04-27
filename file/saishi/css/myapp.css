@@ -194,6 +194,7 @@ p img {
 .font20 { font-size:20px;}
 .font18 { font-size:18px;}
 .font14 { font-size:14px;}
+.font12 { font-size:12px;}
 .mui-bar-tab~.mui-content { padding-bottom:60px;}
 .myapp-bottom { height:60px;}
 .myapp-tuijian { margin:6px 0;}
@@ -349,3 +350,15 @@ h1.myapp-tname { font-size:16px; color:#f60; text-align:center; padding:10px 0 6
 .myapp-picbox {width:45%; float:left;}
 img.uppic { width:40%; margin:6px; float:left; cursor:pointer;}
 .mui-input-row .myapp-upbtn { font-size:12px; border:1px solid #3273ea; color:#3273ea; width:20%; text-align:center; right:10px; top:10px; position:absolute; padding:8px 12px;}
+.myapp-success-tips { background:#fff; text-align:center; padding:30px 0 20px 0; margin-top: 6px;}
+
+
+
+
+
+
+
+
+
+
+

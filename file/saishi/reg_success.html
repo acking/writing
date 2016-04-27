@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>报名提交成功</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/myiconfont.css" />
+    <link href="css/myapp.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">报名提交成功</h1>
+	</header>
+
+	<!--底部导航 start-->
+	<nav class="mui-bar mui-bar-tab myapp-bottom-saishi">
+		<a href="#" class="mui-btn mui-btn-redff3f34 bm-btn">支付报名费用</a>
+	</nav>
+	<!--底部导航end-->
+
+	<div class="mui-content">
+	 	<!--成功反馈start-->
+	    <div class="myapp-success-tips">
+			<p class="c-3fca48 font20">报名申请提交成功 !</p>
+			<p class="c-f60 font12">您可以再您的个人中心中查看</p>
+	    </div>
+	    <!--成功反馈end-->
+	    
+	</div>
+	
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	
+		var open = function(){ mui.openWindow({ url:'add_friend.html'})}
+		mui(".myapp-checkbox-list").on('tap','.myapp-add-friend',function(){
+			open();
+		});
+
+		
+		
+    </script>
+</body>
+</html>

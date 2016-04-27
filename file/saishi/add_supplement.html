@@ -150,6 +150,10 @@
 		<script src="js/mui.previewimage.js"></script>
 		
 		<script>
+			var open = function(){ mui.openWindow({ url:'reg_success.html'})}
+			mui(".myapp-bottom-saishi").on('tap','.bm-btn',function(){
+				open();
+			});
 			(function($) {
 				//$.init();
 				//var result = $('#result')[0];
