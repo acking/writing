@@ -12,8 +12,14 @@
 <body>
 	<header class="mui-bar mui-bar-nav">
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		<h1 class="mui-title">排队</h1>
+		<h1 class="mui-title">选择朋友</h1>
 	</header>
+
+	<!--底部导航 start-->
+	<nav class="mui-bar mui-bar-tab myapp-bottom-saishi">
+		<a href="#" class="mui-btn mui-btn-redff3f34 bm-btn">下一步</a>
+	</nav>
+	<!--底部导航end-->
 
 	<div class="mui-content">
 	 	<!--项目start-->   
@@ -23,24 +29,63 @@
 					<img class="mui-media-object mui-pull-left myapp-radius8" src="images/shuijiao.jpg">
 					<div class="mui-media-body">
 						<p class="myapp-title">深圳大松深圳大鹏年马拉松深圳大鹏新年马拉松 Dapeng New Year </p>
-						<p class='mui-ellipsis c-3364fe'>全程马拉松 </p>
+						<p class='mui-ellipsis c-3364fe'>全程马拉松 <span id='confirmBtn' class="qhxm-po mui-btn mui-btn-warning mui-btn-outlined">切换项目</span></p>
 					</div>
 				</a>
 			</li>
 		</ul>
 	 	<!--项目end-->
-	    
+	    <!--选择朋友start-->
+	    <ul class="myapp-checkbox-list">
+			 <li class="myapp-checkbox-list-li">
+			 	<div class="mui-input-row mui-checkbox mui-left">
+					<label>朋友1</label>
+					<input name="checkbox" value="Item 1" type="checkbox" >
+				</div>
+			 </li>
+			 <li class="myapp-checkbox-list-li">
+			 	<div class="mui-input-row mui-checkbox mui-left">
+					<label>朋友2</label>
+					<input name="checkbox" value="Item 1" type="checkbox" >
+				</div>
+			 </li>
+			 <li class="myapp-checkbox-list-li">
+			 	<div class="mui-input-row mui-checkbox mui-left">
+					<label>朋友3</label>
+					<input name="checkbox" value="Item 1" type="checkbox" >
+				</div>
+			 </li>
+		</ul>
+	    <!--选择朋友end-->
+	    <!--添加朋友start-->
+	    <ul class="myapp-checkbox-list">
+			 <li class="myapp-checkbox-list-li myapp-add-friend">
+			 	<div class="mui-input-row mui-checkbox mui-left">
+					<a class="mui-navigate-right myapp-add"><label>添加我的朋友</label></a>
+				</div>
+			 </li>
+		</ul>
+	    <!--添加朋友end-->
 	</div>
 	
 	<script type="text/javascript" charset="UTF-8">
       	mui.init();
+      	
+		var open = function(){ mui.openWindow({ url:'add_friend.html'})}
+		mui(".myapp-checkbox-list").on('tap','.myapp-add-friend',function(){
+			open();
+		});
+
+		var qhxm = function(){ mui.openWindow({url:'saishi_detail.html'})};
+		document.getElementById("confirmBtn").addEventListener('tap', function() {
+			var btnArray = ['否', '是'];
+			mui.confirm('切换项目您的邀请码将会失效<br/>您确定现在要切换项目吗？', 'Hello 您好', btnArray, function(e) {
+				if (e.index == 1) {
+					qhxm();
+				}
+			})
+		});
 		
-		//打开新闻详情
-		var open = function(){
-			mui.openWindow({
-		   	 	url:'choose_friend.html'
-		 	 });
-		}
 		
     </script>
 </body>

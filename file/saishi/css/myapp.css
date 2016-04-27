@@ -210,6 +210,12 @@ p img {
     background-color: #ccc;
     padding: 0.4em 1.6em;
 }
+.mui-btn-3273ea {
+    color: #fff;
+    border: 1px solid #3273ea;
+    background-color: #3273ea;
+    padding: 0.4em 1.6em;
+}
 .myapp-tuijian .myapp-title { font-size:16px; margin-bottom:6px; color:#333;}
 .myapp-tuijian p { font-size: 12px; line-height:18px ;}
 .myapp-baoming-btn { position: absolute; z-index:1; bottom:15px; right:15px;}
@@ -309,5 +315,37 @@ p.c-f60 { color:#f60;}
 .myapp-lineup-icon { padding:40px 0;}
 .myapp-lineup-icon span.iconfont { font-size:110px; color:#ccc;}
 .myapp-lineup p { padding:10px 30px; line-height:28px;}
-
-
+/*choose_friend*/
+.myapp-checkbox-list { padding:0; background:#fff; border-top:1px solid #ddd;}
+.myapp-checkbox-list-li { padding:10px; margin:2px; border-bottom:1px solid #ddd;}
+.myapp-add-friend .mui-checkbox.mui-left label { padding-left:20px;}
+.myapp-add:after {
+    right: 15px;
+    color:#3364fe;
+    font-size:30px;
+    font-weight:700;
+    content: '\e468';
+}
+.qhxm-po { position:absolute; font-size:12px; padding:2px 4px; right:20px;}
+.myapp-add-pengyou { margin-top:6px; padding-bottom:0px;}
+.tjbtn { padding:30px; text-align:center;}
+.tjbtn .tjbutton { padding:0.8em 8em; font-size:1em;}
+/*supplement_list*/
+.myapp-people-ul { overflow:hidden; list-style: none; padding:0; margin:0; margin-left:6px; margin-top:2px;}
+.myapp-people-ul li { float:left; padding:3px;}
+.myapp-people-box {color:#333; position:relative; z-index:1; background:#fff; width:100%; overflow:hidden; border-radius:4px; border:1px solid #ddd;}
+a.close-a { right:6px; overflow:hidden; position:absolute; z-index:100; font-family:"verdana"; font-weight:200; font-size:20px; color:#666;}
+h3.myapp-people-name { margin-left:10px; margin-top:12px; line-height:30px; font-size:26px;}
+.myapp-people-box p { margin-left:12px; padding:0; margin-bottom:0; line-height:22px; font-size:14px;}
+p.myapp-people-edit { text-align:center; margin:0; padding:0; line-height:32px; border-top:1px solid #ddd;}
+.myapp-people-box p.wszl { margin-bottom:10px;}
+.myapp-people { overflow:hidden; margin-bottom:20px;}
+h1.myapp-tname { font-size:16px; color:#f60; text-align:center; padding:10px 0 6px 0;}
+.myapp-add-pengyou .mui-input-group .mui-input-row { height:auto;}
+.myapp-checkbox { float:left; width:65%;}
+.myapp-checkbox label { float:left; width:auto; font-size:14px; line-height:14px; padding:11px 16px 6px 0px;}
+.myapp-checkbox label input { margin-right:4px;}
+.myapp-checkbox-box { padding-bottom:10px;}
+.myapp-picbox {width:45%; float:left;}
+img.uppic { width:40%; margin:6px; float:left; cursor:pointer;}
+.mui-input-row .myapp-upbtn { font-size:12px; border:1px solid #3273ea; color:#3273ea; width:20%; text-align:center; right:10px; top:10px; position:absolute; padding:8px 12px;}

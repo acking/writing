@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>选择朋友</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/myiconfont.css" />
+    <link href="css/myapp.css" rel="stylesheet"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">选择朋友</h1>
+	</header>
+
+	<!--底部导航 start-->
+	<nav class="mui-bar mui-bar-tab myapp-bottom-saishi">
+		<a href="#" class="mui-btn mui-btn-redff3f34 bm-btn">提交报名信息</a>
+	</nav>
+	<!--底部导航end-->
+
+	<div class="mui-content">
+	 	<!--项目start-->   
+	 	<ul class="mui-table-view myapp-project">
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left myapp-radius8" src="images/shuijiao.jpg">
+					<div class="mui-media-body">
+						<p class="myapp-title">深圳大松深圳大鹏年马拉松深圳大鹏新年马拉松 Dapeng New Year </p>
+						<p class='mui-ellipsis c-3364fe'>全程马拉松 <span id='confirmBtn' class="qhxm-po mui-btn mui-btn-warning mui-btn-outlined">切换项目</span></p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	 	<!--项目end-->
+	    	<!--人员列表start-->
+	    	<div class="myapp-people">
+	    		<ul class="myapp-people-ul">
+	    			<li class="myapp-people-ul-li mui-col-xs-6 mui-col-sm-6">
+	    				<div class="myapp-people-box">
+	    					<a class="close-a" href="#">x</a>
+	    					<h3 class="myapp-people-name">刘强东1</h3>
+	    					<p class="">13566555698</p>
+	    					<p class="wszl c-f60">资料未完善</p>
+	    					<p class="myapp-people-edit"><a href="#">编辑报名信息</a></p>
+	    				</div>
+	    			</li>
+	    			<li class="myapp-people-ul-li mui-col-xs-6 mui-col-sm-6">
+	    				<div class="myapp-people-box">
+	    					<a class="close-a" href="#">x</a>
+	    					<h3 class="myapp-people-name">刘强东2</h3>
+	    					<p class="">13566555698</p>
+	    					<p class="wszl c-3fca48">资料已经完善</p>
+	    					<p class="myapp-people-edit"><a href="#">编辑报名信息</a></p>
+	    				</div>
+	    			</li>
+	    			<li class="myapp-people-ul-li mui-col-xs-6 mui-col-sm-6">
+	    				<div class="myapp-people-box">
+	    					<a class="close-a" href="#">x</a>
+	    					<h3 class="myapp-people-name">刘强东3</h3>
+	    					<p class="">13566555698</p>
+	    					<p class="wszl c-f60">资料未完善</p>
+	    					<p class="myapp-people-edit"><a href="#">编辑报名信息</a></p>
+	    				</div>
+	    			</li>
+	    			<li class="myapp-people-ul-li mui-col-xs-6 mui-col-sm-6">
+	    				<div class="myapp-people-box">
+	    					<a class="close-a" href="#">x</a>
+	    					<h3 class="myapp-people-name">刘强东4</h3>
+	    					<p class="">13566555698</p>
+	    					<p class="wszl c-3fca48">资料已经完善</p>
+	    					<p class="myapp-people-edit"><a href="#">编辑报名信息</a></p>
+	    				</div>
+	    			</li>
+	    		</ul>
+	    	</div>	
+	    	
+	    	<!--人员列表end-->
+	</div>
+	
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+		var open = function(){ mui.openWindow({ url:'add_supplement.html'})}
+		mui(".myapp-people-edit").on('tap','a',function(){
+			open();
+		});
+		mui(".myapp-people-ul-li").on('tap','.close-a',function(){
+			var li = this.parentNode.parentNode;
+			var btnArray = ['否', '是'];
+			mui.confirm('确定取消该参赛者的报名吗？', 'Hello 你好！', btnArray, function(e) {
+				if (e.index == 1) {
+					li.remove();
+				}
+			})
+		});
+    </script>
+</body>
+</html>
