@@ -335,7 +335,7 @@ p.c-f60 { color:#f60;}
 .myapp-people-ul { overflow:hidden; list-style: none; padding:0; margin:0; margin-left:6px; margin-top:2px;}
 .myapp-people-ul li { float:left; padding:3px;}
 .myapp-people-box {color:#333; position:relative; z-index:1; background:#fff; width:100%; overflow:hidden; border-radius:4px; border:1px solid #ddd;}
-a.close-a { right:6px; overflow:hidden; position:absolute; z-index:100; font-family:"verdana"; font-weight:200; font-size:20px; color:#666;}
+a.close-a { right:6px; overflow:hidden; position:absolute; z-index:1; font-family:"verdana"; font-weight:200; font-size:20px; color:#666;}
 h3.myapp-people-name { margin-left:10px; margin-top:12px; line-height:30px; font-size:26px;}
 .myapp-people-box p { margin-left:12px; padding:0; margin-bottom:0; line-height:22px; font-size:14px;}
 p.myapp-people-edit { text-align:center; margin:0; padding:0; line-height:32px; border-top:1px solid #ddd;}
