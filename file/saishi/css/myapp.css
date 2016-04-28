@@ -188,6 +188,7 @@ p img {
 	height: auto;
 }
 /*图片预览*/
+.mb30 { margin-bottom:30px;}
 .c-3364fe { color:#3364fe;} /*蓝色*/
 .c-f60 { color:#f60;} /*橙色*/
 .c-3fca48 { color:#3fca48;} /*绿色*/
@@ -351,14 +352,32 @@ h1.myapp-tname { font-size:16px; color:#f60; text-align:center; padding:10px 0 6
 img.uppic { width:40%; margin:6px; float:left; cursor:pointer;}
 .mui-input-row .myapp-upbtn { font-size:12px; border:1px solid #3273ea; color:#3273ea; width:20%; text-align:center; right:10px; top:10px; position:absolute; padding:8px 12px;}
 .myapp-success-tips { background:#fff; text-align:center; padding:30px 0 20px 0; margin-top: 6px;}
+.myapp-success-info { margin-top: 8px;}
+.myapp-success-info .mui-media-object {
+    line-height: 62px;
+    max-width: 62px;
+    height: 62px;
+    border-radius:6px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.myapp-success-info .mui-media-body { line-height:20px; white-space:normal }
+span.ssxq-btn { cursor:pointer; position:absolute; right:10px; top:50px; color:#466ffe; font-size:12px;}
+.myapp-success-info .myapp-label { font-size:12px;}
+.myapp-success-info .myapp-label span.label1 { display:inline; color:#666; float:left; width:62px;}
+.myapp-success-info .myapp-label span.text1 { width:78%; float:left; color:#333;}
+.myapp-success-info .myapp-label span.text1 i { display:block; color:#f90;}
+.myapp-success-info .myapp-label span.c-f90 { color:#f90;}
+.myapp-success-info .myapp-label span.text1 a { float:right;}
 
-
-
-
-
-
-
-
-
+.myapp-pro-box2 { overflow:hidden; border-top:1px solid #ddd;background:#fff; }
+.myapp-pro-list2 { overflow:hidden; padding:10px; border-bottom:1px solid #ddd;}
+.myapp-pro-img { float:left; width: 30%;}
+.myapp-pro-con2 { float:left; width: 65%; display: inline; margin-left:8px;}
+.myapp-pro-con2 h1.myapp-pro-t { color:#333; margin:0; font-size: 14px; height:16px; line-height:16px; overflow:hidden;}
+.myapp-pro-con2 p.myapp-pro-t2 { margin:0; font-size: 12px; height:26px; line-height:26px;}
+.myapp-pro-con2 p.myapp-pro-t3 { margin:0; font-size: 12px; height:28px; overflow:hidden; line-height:14px;}
+.myapp-pro-con2 p.myapp-pro-t2 span { font-size:12px; }
+.height10 { height:10px; clear:both;}
 
 
