@@ -28,6 +28,7 @@ span.school { /*width:350px; display:inline-block; */ margin-left:20px; color:#6
 .tb-text2 { font-size:14px; color:#666; }
 dl.list-2 { margin-bottom:8px; overflow:hidden;}
 dl.list-2 dt { text-align:center; font-size:14px; color:#666; margin:10px 0;}
+dl.list-2 dt.left { text-align:left; font-size:14px; color:#666; margin:10px 0;}
 dl.list-2 dd { margin:6px 0;width:98%;}
 span.bfb { width:100%; height:18px; line-height:18px; padding:4px; display:inline-block; border-radius:20px; background:#303538;}
 span.bfb i { font-style:normal; font-size:14px; line-height:18px; color:#fff; text-indent:20px; width:0%; height:18px;  border-radius:20px; display:inline-block; background:#6c787f; float:left;}
@@ -129,3 +130,5 @@ to {width:90%;}
 .set-nav { position:absolute; right:2em; top:1em;}
 .set-nav span { color:#999; font-size:12px;}
 .set-nav span a { color:#999; text-decoration: none;}
+dl.list-2 dd { line-height:26px; border-bottom:1px dashed #cecece;}
+dl.list-2 dd span { width:33.33%;display: inline-block;}

@@ -14,7 +14,7 @@
 			<div class="set-nav">
 				<span><a href="chenqi-cv.pdf" target="blank">PDF下载</a></span>
 			</div>
-			<div class="photo"><img src="img/i3.min.jpg"></div>
+			<div class="photo"><img src="img/i2.min.jpg"></div>
 			<p class="name">陈琦的个人简历</p>
 		</header>
 		<section>
@@ -32,8 +32,8 @@
 			<div class="box">
 				<h1 class="title-1">自我评价</h1>
 				<ul class="list-3">
-					<li><span>熟练掌握 HTML、CSS、JS，熟悉 PHP、 HTML5、 jQuery，了解 MySQL、 SQL Server;</span></li>
-					<li><span>熟练掌握 Bootstrap、 Pure、 MUI、 Yii 等框架及 动静态语言 的整合技术，熟悉 MVC 开发模式;</span></li>
+					<li><span>熟练掌握 HTML、CSS、JS，熟悉 PHP HTML5 jQuery，了解 MySQL SQL Server;</span></li>
+					<li><span>熟练掌握 Bootstrap Pure MUI Yii 等框架及 动静态语言 的整合技术，熟悉 MVC 开发模式;</span></li>
 					<li><span>熟悉基本的 Linux 的基本命令，能熟练的在Linux平台编辑安装 搭建 LNMPA 的网站服务器架构;</span></li>
 					<li><span>能基本的使用MindManager创建产品的思维导图、 Axure构建产品原型;</span></li>
 					<li><span>了解敏捷开发scrum的基本模式，熟悉svn、git的代码管理。</span></li>
@@ -54,23 +54,16 @@
 				<h1 class="title-1">职业技能</h1>
 				<dl class="list-2">
 					<dt>{ 开发语言 }</dt>
-					<dd><span>HTML、CSS</span><span>使用时间：7年 </span><span>掌握程度：精通</span></dd>
-					<dd><span>JavaScript</span><span>使用时间：7年 </span><span>掌握程度：熟练</span></dd>
-					<dd><span>Node.js</span><span>使用时间：1年 </span><span>掌握程度：了解</span></dd>
-					<dd><span>PHP </span><span>使用时间：5年 </span><span>掌握程度：熟练</span></dd>
-					<dd><span>MySQL</span><span>使用时间：5年 </span><span>掌握程度：一般</span></dd>
-					<dd><span>Java</span><span>使用时间：1年 </span><span>掌握程度：了解</span></dd>
-					<dd><span>Python</span><span>使用时间：1年 </span><span>掌握程度：了解</span></dd>
+					<dd><span class="bfb"><i class="bfb90">HTML/CSS/JS</i></span></dd>
+					<dd><span class="bfb"><i class="bfb60">PHP</i></span></dd>
+					<dd><span class="bfb"><i class="bfb30">MYSQL</i></span></dd>
 				</dl>
 				<dl class="list-2">
 					<dt>{ 开发工具 }</dt>
-					<dd><span>Photoshop</span><span>使用时间：7年 </span><span>掌握程度：精通</span></dd>
-					<dd><span>Adobe illustrator</span><span>使用时间：5年 </span><span>掌握程度：一般</span></dd>
-					<dd><span>Sublime Text</span><span>使用时间：4年 </span><span>掌握程度：精通</span></dd>
-					<dd><span>Axure</span><span>使用时间：3年 </span><span>掌握程度：熟练</span></dd>
-					<dd><span>MindManager</span><span>使用时间：3年 </span><span>掌握程度：熟练</span></dd>
-					<dd><span>git、svn</span><span>使用时间：3年 </span><span>掌握程度：熟练</span></dd>
-					<dd><span>PPT WORD</span><span>使用时间：8年 </span><span>掌握程度：熟练</span></dd>
+					<dd><span class="bfb"><i class="bfb80">Photoshop</i></span></dd>
+					<dd><span class="bfb"><i class="bfb90">SublimeText </i></span></dd>
+					<dd><span class="bfb"><i class="bfb70">Axure</i></span></dd>
+					<dd><span class="bfb"><i class="bfb50">MindManager</i></span></dd>
 				</dl>
 			</div>
 		</section>
@@ -201,8 +194,39 @@
 				<h1 class="title-1">教育经历</h1>
 				<ul class="list-1">
 					<li>
-						<span class="work-time">2013/06 - 2015/09</span><span class="c-999">{专科}</span><span class="school">北京航空航天大学－现代远程教育学院《计算机科学与技术》</span>
+						<span class="work-time">2013/06 - 2015/09</span><span class="c-999">{专科}</span><span class="school">北京航空航天大学《计算机科学与技术》</span>
 						<span class="school">曾在学校获得《优秀毕业生荣誉证书》</span>
+					</li>	
+					<li><span class="work-time">2008/06 - 2009/09</span><span class="c-999">{中专}</span>
+						<span class="school">湖北银河信息技术学院 《计算机应用》</span>
+						<span class="school">曾在学校获得《网络安全工程师》证书</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<div class="box">
+				<h1 class="title-1">活动经历</h1>
+				<ul class="list-1">
+					<li>
+						<span class="work-time">2016/04/ 08-09</span><span class="c-999">{上海}</span>
+						<span class="school">参加《2016第十三届上海教育博览会&bull;互联网+教育展》</span>
+					</li>
+					<li>
+						<span class="work-time">2015/11/ 26-27</span><span class="c-999">{北京}</span>
+						<span class="school">参加《2015中国国际远程教育大会》</span>
+					</li>
+					<li>
+						<span class="work-time">2015/08/08</span><span class="c-999">{上海}</span>
+						<span class="school"><a href="http://www.w3ctech.com/event/52" target="blank">参加第二届《中国 CSS 开发者大会》</a></span>
+					</li>
+					<li>
+						<span class="work-time">2014/11/ 27-28</span><span class="c-999">{北京}</span>
+						<span class="school"><a href="http://acking.github.io/writing/join-china-international-distance-education-conference-2014" target="blank">参加《2014中国国际远程教育大会》</a></span>
+					</li>
+					<li>
+						<span class="work-time">2013/11/09</span><span class="c-999">{上海}</span>
+						<span class="school"><a href="http://webrebuild.org/2013/sh/agenda.html" target="blank">参加《2WebReBuild 2013 年会 蜕变》</a></span>
 					</li>
 				</ul>
 			</div>
