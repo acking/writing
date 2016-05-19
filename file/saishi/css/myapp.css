@@ -515,3 +515,18 @@ img.head-img { width:40px; height:40px;}
     width: 40px;
     height: 40px;
 }
+.myapp-create-team .mui-table-view-cell { padding:15px;}
+.myapp-create-team .mui-table-view-cell { padding:15px;}
+.myapp-create-team .mui-input-row { padding:10px;}
+.myapp-create-team #head { text-indent:12px;}
+.mui-input-group:before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
