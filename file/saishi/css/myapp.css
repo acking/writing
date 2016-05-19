@@ -5,6 +5,89 @@
  * Copyright (c) 2015年 Acking. All rights reserved.
  * =====================================================
  */
+/*表格*/
+.app-table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+.app-table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+
+.app-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.app-table td,
+.app-table th {
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.5em 1em; /* cell padding */
+}
+.app-table td:first-child,
+.app-table th:first-child {
+    border-left-width: 0;
+}
+
+.app-table thead {
+    background: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+.app-table td {
+    background-color: transparent;
+}
+.app-table-odd td {
+    background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+.app-table-striped tr:nth-child(2n-1) td {
+    background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+.app-table-bordered td {
+    border-bottom: 1px solid #cbcbcb;
+}
+.app-table-bordered tbody > tr:last-child td,
+.app-table-horizontal tbody > tr:last-child td {
+    border-bottom-width: 0;
+}
+
+/* HORIZONTAL BORDERED TABLES */
+
+.app-table-horizontal td,
+.app-table-horizontal th {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #cbcbcb;
+}
+.app-table-horizontal tbody > tr:last-child td {
+    border-bottom-width: 0;
+}
+
+
+
 /*弹出菜单*/
 /*跨webview需要手动指定位置*/
 .mui-plus header.mui-bar {
@@ -190,6 +273,10 @@ p img {
 /*图片预览*/
 .mb30 { margin-bottom:30px;}
 .c-3364fe { color:#3364fe;} /*蓝色*/
+.c-ff72bb { color:#ff72bb;} /*粉红*/
+.c-5ab9f6 { color:#5ab9f6;} /*淡蓝*/
+.c-333 { color:#333;}
+.c-666 { color:#666;}
 .c-f60 { color:#f60;} /*橙色*/
 .c-3fca48 { color:#3fca48;} /*绿色*/
 .font20 { font-size:20px;}
@@ -216,6 +303,12 @@ p img {
     color: #fff;
     border: 1px solid #3273ea;
     background-color: #3273ea;
+    padding: 0.4em 1.6em;
+}
+.mui-btn-f60 {
+    color: #fff;
+    border: 1px solid #f60;
+    background-color: #f60;
     padding: 0.4em 1.6em;
 }
 .myapp-tuijian .myapp-title { font-size:16px; margin-bottom:6px; color:#333;}
@@ -379,5 +472,46 @@ span.ssxq-btn { cursor:pointer; position:absolute; right:10px; top:50px; color:#
 .myapp-pro-con2 p.myapp-pro-t3 { margin:0; font-size: 12px; height:28px; overflow:hidden; line-height:14px;}
 .myapp-pro-con2 p.myapp-pro-t2 span { font-size:12px; }
 .height10 { height:10px; clear:both;}
+.my-paiming {margin-top:6px; margin-bottom:1px solid #ddd; overflow:hidden;}
+.my-paiming .mui-navigate-right:after { font-size: 26px;}
+.my-paiming .myapp-saishi-title { margin-bottom:0;}
+.myapp-no-icon { padding:20px 0;}
+.myapp-no-icon span.iconfont { font-size:80px; color:#ccc;}
+.myapp-team { margin-top: 6px; overflow:hidden; background:#fff; border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+.myapp-team img.mui-media-object { float:left; width:30%; padding:8px;}
+.myapp-team .mui-media-body { width:70%; padding:8px; float:left;}
+.myapp-team .mui-media-body p { clear:both; margin-top:2px; margin-bottom:0; line-height:20px;}
+.myapp-team .mui-media-body p.myapp-title {margin-bottom:4px; overflow:hidden;}
+.myapp-team .mui-media-body p.mui-ellipsis { overflow:hidden; word-wrap:break-word;white-space:normal;}
+span.myapp-left-text { float:left; width:82%;}
+span.myapp-left-label { float:left; width:18%;}
+ul.myapp-team-chengji { margin:6px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; list-style:none; background:#fff; text-align:center; padding:12px 0;}
+ul.myapp-team-chengji li { font-size:14px; line-height:26px;}
+span.myapp-val { font-size: 18px;}
+.myapp-team-cjbox { width:100%; overflow:hidden; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background: #fff;}
+ul.myapp-team-chengji2 { float:left; margin:6px 0;  list-style:none; background:#fff; text-align:center; padding:12px 0;}
+ul.myapp-team-chengji2 li { font-size:14px; line-height:26px;}
+.my-imgradius img.mui-media-object { border-radius:42px; float:left; overflow:hidden;}
+span.width-gd { width:45%; float:left; color:#666; overflow:hidden;}
+.my-imgradius .myapp-saishi-p { line-height:20px; overflow:hidden;}
+.my-imgradius .myapp-saishi-title { font-size:16px;}
+.mytable { background:#fff; overflow:hidden; margin:6px 0 10px 0; padding:10px;}
+.mytable table.myapp-table { width:100%;}
+.mytable table.myapp-table thead { background:#eee;}
+.myapp-table { font-size:12px; margin-bottom:10px;}
+.myapp-table tr td { text-align:center;}
 
-
+.myapp-person { margin-top: 6px; overflow:hidden; background:#fff; border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+.myapp-person img.mui-media-object { float:left; width:60px; height:60px; padding:8px;}
+.myapp-person .mui-media-body { width:80%; padding:8px; float:left;}
+.myapp-person .mui-media-body p { clear:both; margin-top:2px; margin-bottom:0; line-height:20px;}
+.myapp-person .mui-media-body p.myapp-title {margin-bottom:4px; overflow:hidden;}
+.myapp-person .mui-media-body p.mui-ellipsis { overflow:hidden; word-wrap:break-word;white-space:normal;}
+img.head-img { width:40px; height:40px;}
+#head-img1 {
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+}

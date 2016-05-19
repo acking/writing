@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>创建队伍</title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	    <link href="css/myapp.css" rel="stylesheet"/>
+		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">创建队伍</h1>
+		</header>
+		<div class="mui-content">
+		 	<form class="" action="supplement_list.html">
+			<!--创建队伍start-->
+		 	<div class="myapp-add-pengyou">
+		 		<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a id="head" class="mui-navigate-right">头像
+						<span class="mui-pull-right head">
+							<img class="head-img mui-action-preview" id="head-img1" src="images/shuijiao.jpg"/>
+						</span>
+					</a>
+					</li>
+				</ul>
+		 		<div class="mui-input-group ">
+		 			
+				<div class="mui-input-row">
+					<label>队伍名称：</label>
+					<input type="text" placeholder="请输入队伍名称...">
+				</div>
+				<div class="mui-input-row">
+					<label>队伍人数：</label>
+					<input type="text" value="5人" disabled="disabled">
+				</div>
+				<div class="mui-input-row">
+					<span class="mui-navigate-right">
+					<label>队伍类型：</label>
+					<input type="text" placeholder="请选择队伍类型" id='showSex'>
+					<div id='sexResult' class="ui-alert"></div>
+					</span>
+				</div>
+				
+				<div class="mui-input-row">
+					<label>队伍口号：</label>
+					<input type="text" placeholder="请输入队伍口号...">
+				</div>
+				<div class="mui-input-row">
+					<label>队伍简介：</label>
+					<input type="text" placeholder="请输入队伍简介...">
+				</div>
+	
+				</div>
+			</div>
+		 	<!--创建队伍end-->
+		 	<div class="tjbtn">
+				<a href="supplement_list.html" class="mui-btn mui-btn-primary tjbutton">保存资料</a>
+		 	</div>
+			</form>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		
+		
+	<script type="text/javascript" charset="UTF-8">
+      	(function($, doc) {
+				$.init();
+				$.ready(function() {
+					
+					//-----------------------------------------
+					//性别设置
+					var sexPicker = new $.PopPicker();
+					sexPicker.setData([{
+						value: '男',
+						text: '男'
+					}, {
+						value: '女',
+						text: '女'
+					}]);
+					var showSexButton = doc.getElementById('showSex');
+					var sexResult = doc.getElementById('sexResult');
+					showSexButton.addEventListener('tap', function(event) {
+						sexPicker.show(function(items) {
+							showSexButton.value = items[0].value;
+						});
+					}, false);
+					//-----------------------------------------
+					
+				});
+			})(mui, document);
+			
+			
+		//更换头像
+		mui(".mui-table-view-cell").on("tap", "#head", function(e) {
+			if(mui.os.plus){
+				var a = [{
+					title: "拍照"
+				}, {
+					title: "从手机相册选择"
+				}];
+				plus.nativeUI.actionSheet({
+					title: "修改头像",
+					cancel: "取消",
+					buttons: a
+				}, function(b) {
+					switch (b.index) {
+						case 0:
+							break;
+						case 1:
+							getImage();
+							break;
+						case 2:
+							galleryImg();
+							break;
+						default:
+							break
+					}
+				})	
+			}
+			
+		});
+		
+		function getImage() {
+			var c = plus.camera.getCamera();
+			c.captureImage(function(e) {
+				plus.io.resolveLocalFileSystemURL(e, function(entry) {
+					var s = entry.toLocalURL() + "?version=" + new Date().getTime();
+					console.log(s);
+					document.getElementById("head-img").src = s;
+					document.getElementById("head-img1").src = s;
+					//变更大图预览的src
+					//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+					document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
+				}, function(e) {
+					console.log("读取拍照文件错误：" + e.message);
+				});
+			}, function(s) {
+				console.log("error" + s);
+			}, {
+				filename: "_doc/head.jpg"
+			})
+		}
+			
+			
+    </script>		
+	</body>
+
+</html>
