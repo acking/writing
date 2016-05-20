@@ -530,3 +530,17 @@ img.head-img { width:40px; height:40px;}
     transform: scaleY(.5);
     background-color: #c8c7cc;
 }
+ul.myapp-team-yqm { margin:6px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; list-style:none; background:#fff; text-align:left; padding:12px 0;}
+ul.myapp-team-yqm li { text-indent:12px; font-size:14px; line-height:26px;}
+.mui-table-view .myapp-duiwu  img { width:35px; height:35px; border-radius:35px;}
+ li.myapp-duiwu { line-height:35px; padding:10px;}
+span.myapp-out { float:right; margin-right:10px; color:#2f61fe; font-size:12px;}
+.myapp-team-edit { position:absolute; right:10px; margin-top:8px;}
+.myapp-team-edit .mui-btn-outlined.mui-btn-warning, .mui-btn-outlined.mui-btn-yellow { padding:4px 8px; font-size:12px;}
+span.myapp-change { float:right; color:#2f61fe; margin-right:10px; border-left:1px solid #ddd;}
+
+.po2 { bottom:70px;}
+.po3 { bottom:140px;}
+
+
+
