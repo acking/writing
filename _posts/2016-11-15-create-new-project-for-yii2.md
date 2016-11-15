@@ -4,12 +4,11 @@ category: "yii2"
 tags: [yii2, php]
 ---
 
-#Yii2搭建新的项目
 >Yii2官方网站：http://www.yiiframework.com
 
 ###通过 Composer 安装
 第一步：
-	
+
 	php composer.phar global require "fxp/composer-asset-plugin:~1.2.0"
 	#安装Composer Asset插件
 
@@ -27,12 +26,12 @@ eg:
 	#安装yii2完成,查看文件目录列表
 	$ php init
 	#初始化php项目,ok可以通过http://localhost/superplanner/frontend/web/访问前台页面
-	
+
 ###通过bitbucket管理代码
 第一步：
 
 	创建新的repository,得到git@bitbucket.org:******/superplanner.git
-	
+
 第二步：
 将新项目加入到bitbucket里面
 
