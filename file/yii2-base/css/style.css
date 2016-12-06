@@ -1,0 +1,17 @@
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+	text-transform: inherit;
+}
+
+.reveal li.page-fy { list-style:none; margin-left:5px; font-size:70%; color:#5d6368;}
+.reveal p.page-fy { list-style:none; font-size:70%; color:#606466;}
+.c-333 { color:#333;}
+.c-666 { color:#666;}
+.c-999 { color:#999;}
+.c-f00 { color:#f00;}
+.c-69a1ff { color:#69a1ff;}
+.c-b256ff { color:#b256ff;}
+.c-17ff2e { color:#17ff2e;}
+.reveal .with-blockquote { width:80%; font-size:55%;}
+.reveal section img { border-radius:6px;}
+table.tab1 { border:2px solid #fff;}
+.reveal section img.noborder { border:none;}
