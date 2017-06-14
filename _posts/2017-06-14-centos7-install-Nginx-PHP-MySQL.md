@@ -3,6 +3,7 @@ title: "CentOS7安装Nginx+PHP+MySQL"
 category: "安装web环境"
 tags: [CentOS, WEB]
 ---
+
 ##检查服务器版本命令
 	uname -a # 查看内核/操作系统/CPU信息
 	head -n 1 /etc/issue # 查看操作系统版本
@@ -63,10 +64,13 @@ Nginx为centos提供了Pre-Built的发布包，使得安装起来非常简单。
 	# yum install epel-release
 	# rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 	yum install http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+
 2、确认安装的php版本
 	yum list --enablerepo=remi --enablerepo=remi-php56 | grep php
+
 3、安装php5.6及常用模块
 	yum install --enablerepo=remi --enablerepo=remi-php56 nginx php php-opcache php-pecl-apcu php-devel php-mbstring php-mcrypt php-mysqlnd php-phpunit-PHPUnit php-pecl-xdebug php-pecl-xhprof php-pdo php-pear php-fpm php-cli php-xml php-bcmath php-process php-gd php-common php-xcache
+
 启动服务
 	systemctl start nginx
 	systemctl start php-fpm
@@ -75,8 +79,10 @@ Nginx为centos提供了Pre-Built的发布包，使得安装起来非常简单。
 
 安装repo 源
 	yum install http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
 安装 mysqlserver
 	yum install mysql-server
+
 启动mysql
 	systemctl start mysqld
 
