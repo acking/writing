@@ -49,7 +49,7 @@ Nginx为centos提供了Pre-Built的发布包，使得安装起来非常简单。
 可见nginx官网
 
 执行yum安装
-	
+
 	yum install nginx -y
 
 查看nginx版本
@@ -87,24 +87,65 @@ Nginx为centos提供了Pre-Built的发布包，使得安装起来非常简单。
 	yum install --enablerepo=remi --enablerepo=remi-php56 nginx php php-opcache php-pecl-apcu php-devel php-mbstring php-mcrypt php-mysqlnd php-phpunit-PHPUnit php-pecl-xdebug php-pecl-xhprof php-pdo php-pear php-fpm php-cli php-xml php-bcmath php-process php-gd php-common php-xcache
 
 启动服务
-	
+
 	systemctl start nginx
 	systemctl start php-fpm
 
 ##mysql部分
 
 安装repo 源
-	
+
 	yum install http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 
 安装 mysqlserver
-	
+
 	yum install mysql-server
 
 启动mysql
-	
+
 	systemctl start mysqld
+
+
+补充
+安装php7
+webtatic方式
+
+	rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+	rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+
+	yum install php70w php70w-opcache php70w-fpm
+
+
+nginx配置
+
+	server{
+        listen 80;
+        server_name lara.0003688.com;
+
+	    root /home/www/laravel/public;
+	    index index.php index.html index.htm;
+
+	    location / {
+	        try_files $uri $uri/ /index.php?$query_string;
+	    }
+	    location ~ \.php$ {
+	        try_files $uri /index.php =404;
+	        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+	        fastcgi_pass 127.0.0.1:9000;
+	        fastcgi_index index.php;
+	        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	        include fastcgi_params;
+	    }
+	}
+
+如果显示空白可能是
+
+	  chmod -R 777 storage
+
+
 
 参考
 http://www.jianshu.com/p/9eb18b3aeb16
 http://www.ha97.com/5882.html
+
+http://www.jianshu.com/p/b4631a899030
