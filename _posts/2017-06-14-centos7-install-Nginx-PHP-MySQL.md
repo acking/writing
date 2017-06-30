@@ -143,9 +143,98 @@ nginx配置
 	  chmod -R 777 storage
 
 
+开机自启动nginx，php-fpm（其他服务类似）
+centos 7以上是用Systemd进行系统初始化的，Systemd 是 Linux 系统中最新的初始化系统（init），它主要的设计目标是克服 sysvinit 固有的缺点，提高系统的启动速度。
+Systemd服务文件以.service结尾，比如现在要建立nginx为开机启动，如果用yum install命令安装的，yum命令会自动创建nginx.service文件，直接用命令systemcel enable nginx.service设置开机启动即可。
+
+	systemcel enable nginx.service
+
+源码安装的手动建立nginx.service服务文件
+
+在系统服务目录里创建nginx.service文件
+
+	vi /lib/systemd/system/nginx.service
+
+写入以下内容（路径改成自己的）
+
+	[Unit]
+	Description=nginx
+	After=network.target
+	[Service]
+	Type=forking
+	ExecStart=/www/lnmp/nginx/sbin/nginx -c /www/lnmp/nginx/conf/nginx.conf
+	ExecReload=/www/lnmp/nginx/sbin/nginx -s reload
+	ExecStop=/www/lnmp/nginx/sbin/nginx -s quit
+	PrivateTmp=true
+	[Install]
+	WantedBy=multi-user.target
+
+在系统服务目录里创建php-fpm.service文件
+
+	vi /lib/systemd/system/php-fpm.service
+
+写入以下内容（路径改成自己的）
+
+	[Unit]
+	Description=php-fpm
+	After=network.target
+	[Service]
+	Type=forking
+	ExecStart=/www/lnmp/php/sbin/php-fpm
+	PrivateTmp=true
+	[Install]
+	WantedBy=multi-user.target
+
+Unit]:服务的说明
+Description:描述服务
+After:描述服务类别
+[Service]服务运行参数的设置
+Type=forking是后台运行的形式
+ExecStart为服务的具体运行命令
+ExecReload为重启命令
+ExecStop为停止命令
+PrivateTmp=True表示给服务分配独立的临时空间
+注意：[Service]的启动、重启、停止命令全部要求使用绝对路径
+[Install]运行级别下服务安装的相关设置，可设置为多用户，即系统运行级别为3
+
+测试并加入开机自启
+
+先关闭nginx，php-fpm
+
+使用以下命令开启
+
+	systemctl start nginx.service             #如果服务是开启状态，使用此命令会启动失败。
+	systemctl start php-fpm.service
+
+开启成功，将服务加入开机自启
+
+	systemctl enable nginx.service                #注意后面不能跟空格
+	systemctl enable php-fpm.service
+
+重启服务器，查看是否启动
+
+	shutdown -r now        #重启
+
+	systemctl list-units --type=service           #查看运行的服务
+
+其他命令
+
+	systemctl start nginx.service              #启动nginx服务
+	systemctl enable nginx.service             #设置开机自启动
+	systemctl disable nginx.service            #停止开机自启动
+	systemctl status nginx.service             #查看服务当前状态
+	systemctl restart nginx.service　          #重新启动服务
+	systemctl list-units --type=service        #查看所有已启动的服务
+
+
+
+
+
 
 参考
 http://www.jianshu.com/p/9eb18b3aeb16
 http://www.ha97.com/5882.html
 
 http://www.jianshu.com/p/b4631a899030
+
+http://www.jianshu.com/p/b5fa86d54685
