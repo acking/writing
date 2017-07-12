@@ -1,0 +1,703 @@
+/*
+    So you like the style of impress.js demo?
+    Or maybe you are just curious how it was done?
+
+    You couldn't find a better place to find out!
+
+    Welcome to the stylesheet impress.js demo presentation.
+
+    Please remember that it is not meant to be a part of impress.js and is
+    not required by impress.js.
+    I expect that anyone creating a presentation for impress.js would create
+    their own set of styles.
+
+    But feel free to read through it and learn how to get the most of what
+    impress.js provides.
+
+    And let me be your guide.
+
+    Shall we begin?
+*/
+
+
+/*
+    We start with a good ol' reset.
+    That's the one by Eric Meyer http://meyerweb.com/eric/tools/css/reset/
+
+    You can probably argue if it is needed here, or not, but for sure it
+    doesn't do any harm and gives us a fresh start.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+    Now here is when interesting things start to appear.
+
+    We set up <body> styles with default font and nice gradient in the background.
+    And yes, there is a lot of repetition there because of -prefixes but we don't
+    want to leave anybody behind.
+*/
+body {
+    font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+}
+
+/*
+    Now let's bring some text styles back ...
+*/
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+/*
+    ... and give links a nice look.
+*/
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+/*
+    Because the main point behind the impress.js demo is to demo impress.js
+    we display a fallback message for users with browsers that don't support
+    all the features required by it.
+
+    All of the content will be still fully accessible for them, but I want
+    them to know that they are missing something - that's what the demo is
+    about, isn't it?
+
+    And then we hide the message, when support is detected in the browser.
+*/
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+/*
+    Now let's style the presentation steps.
+
+    We start with basics to make sure it displays correctly in everywhere ...
+*/
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+/*
+    ... and we enhance the styles for impress.js.
+
+    Basically we remove the margin and make inactive steps a little bit transparent.
+*/
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+/*
+    These 'slide' step styles were heavily inspired by HTML5 Slides:
+    http://html5slides.googlecode.com/svn/trunk/styles.css
+
+    ;)
+
+    They cover everything what you see on first three steps of the demo.
+*/
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+/*
+    And now we start to style each step separately.
+
+    I agree that this may be not the most efficient, object-oriented and
+    scalable way of styling, but most of steps have quite a custom look
+    and typography tricks here and there, so they had to be styled separately.
+
+    First is the title step with a big <h1> (no room for padding) and some
+    3D positioning along Z axis.
+*/
+
+#title {
+    padding: 0;
+}
+
+#title .try {
+    font-size: 64px;
+    position: absolute;
+    top: -0.5em;
+    left: 1.5em;
+
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+
+#title h1 {
+    font-size: 190px;
+
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+
+#title .footnote {
+    font-size: 32px;
+}
+
+/*
+    Second step is nothing special, just a text with a link, so it doesn't need
+    any special styling.
+
+    Let's move to 'big thoughts' with centered text and custom font sizes.
+*/
+#big {
+    width: 600px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1;
+}
+
+#big b {
+    display: block;
+    font-size: 250px;
+    line-height: 250px;
+}
+
+#big .thoughts {
+    font-size: 90px;
+    line-height: 150px;
+}
+
+/*
+    'Tiny ideas' just need some tiny styling.
+*/
+#tiny {
+    width: 500px;
+    text-align: center;
+}
+
+/*
+    This step has some animated text ...
+*/
+#ing { width: 500px }
+
+/*
+    ... so we define display to `inline-block` to enable transforms and
+    transition duration to 0.5s ...
+*/
+#ing b {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+/*
+    ... and we want 'positioning` word to move up a bit when the step gets
+    `present` class ...
+*/
+#ing.present .positioning {
+    -webkit-transform: translateY(-10px);
+    -moz-transform:    translateY(-10px);
+    -ms-transform:     translateY(-10px);
+    -o-transform:      translateY(-10px);
+    transform:         translateY(-10px);
+}
+
+/*
+    ... 'rotating' to rotate a quarter of a second later ...
+*/
+#ing.present .rotating {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform:    rotate(-10deg);
+    -ms-transform:     rotate(-10deg);
+    -o-transform:      rotate(-10deg);
+    transform:         rotate(-10deg);
+
+    -webkit-transition-delay: 0.25s;
+    -moz-transition-delay:    0.25s;
+    -ms-transition-delay:     0.25s;
+    -o-transition-delay:      0.25s;
+    transition-delay:         0.25s;
+}
+
+/*
+    ... and 'scaling' to scale down after another quarter of a second.
+*/
+#ing.present .scaling {
+    -webkit-transform: scale(0.7);
+    -moz-transform:    scale(0.7);
+    -ms-transform:     scale(0.7);
+    -o-transform:      scale(0.7);
+    transform:         scale(0.7);
+
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay:    0.5s;
+    -ms-transition-delay:     0.5s;
+    -o-transition-delay:      0.5s;
+    transition-delay:         0.5s;
+}
+
+/*
+    The 'imagination' step is again some boring font-sizing.
+*/
+
+#imagination {
+    width: 600px;
+}
+
+#imagination .imagination {
+    font-size: 78px;
+}
+
+/*
+    There is nothing really special about 'use the source, Luke' step, too,
+    except maybe of the Yoda background.
+
+    As you can see below I've 'hard-coded' it in data URL.
+    That's not the best way to serve images, but because that's just this one
+    I decided it will be OK to have it this way.
+
+    Just make sure you don't blindly copy this approach.
+*/
+#source {
+    width: 700px;
+    padding-bottom: 300px;
+
+    /* Yoda Icon :: Pixel Art from Star Wars http://www.pixeljoint.com/pixelart/1423.htm */
+    background-image: url(data:image/png;base64,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);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#source q {
+    font-size: 60px;
+}
+
+/*
+    And the "it's in 3D" step again brings some 3D typography - just for fun.
+
+    Because we want to position <span> elements in 3D we set transform-style to
+    `preserve-3d` on the paragraph.
+    It is not needed by webkit browsers, but it is in Firefox. It's hard to say
+    which behaviour is correct as 3D transforms spec is not very clear about it.
+*/
+#its-in-3d p {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style:    preserve-3d; /* Y U need this Firefox?! */
+    -ms-transform-style:     preserve-3d;
+    -o-transform-style:      preserve-3d;
+    transform-style:         preserve-3d;
+}
+
+/*
+    Below we position each word separately along Z axis and we want it to transition
+    to default position in 0.5s when the step gets `present` class.
+
+    Quite a simple idea, but lot's of styles and prefixes.
+*/
+#its-in-3d span,
+#its-in-3d b {
+    display: inline-block;
+    -webkit-transform: translateZ(40px);
+    -moz-transform:    translateZ(40px);
+    -ms-transform:     translateZ(40px);
+    -o-transform:      translateZ(40px);
+     transform:        translateZ(40px);
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#its-in-3d .have {
+    -webkit-transform: translateZ(-40px);
+    -moz-transform:    translateZ(-40px);
+    -ms-transform:     translateZ(-40px);
+    -o-transform:      translateZ(-40px);
+    transform:         translateZ(-40px);
+}
+
+#its-in-3d .you {
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+
+#its-in-3d .noticed {
+    -webkit-transform: translateZ(-40px);
+    -moz-transform:    translateZ(-40px);
+    -ms-transform:     translateZ(-40px);
+    -o-transform:      translateZ(-40px);
+    transform:         translateZ(-40px);
+}
+
+#its-in-3d .its {
+    -webkit-transform: translateZ(60px);
+    -moz-transform:    translateZ(60px);
+    -ms-transform:     translateZ(60px);
+    -o-transform:      translateZ(60px);
+    transform:         translateZ(60px);
+}
+
+#its-in-3d .in {
+    -webkit-transform: translateZ(-10px);
+    -moz-transform:    translateZ(-10px);
+    -ms-transform:     translateZ(-10px);
+    -o-transform:      translateZ(-10px);
+    transform:         translateZ(-10px);
+}
+
+#its-in-3d .footnote {
+    font-size: 32px;
+
+    -webkit-transform: translateZ(-10px);
+    -moz-transform:    translateZ(-10px);
+    -ms-transform:     translateZ(-10px);
+    -o-transform:      translateZ(-10px);
+    transform:         translateZ(-10px);
+}
+
+#its-in-3d.present span,
+#its-in-3d.present b {
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
+
+/*
+    The last step is an overview.
+    There is no content in it, so we make sure it's not visible because we want
+    to be able to click on other steps.
+
+*/
+#overview { display: none }
+
+/*
+    We also make other steps visible and give them a pointer cursor using the
+    `impress-on-` class.
+*/
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+/*
+    Now, when we have all the steps styled let's give users a hint how to navigate
+    around the presentation.
+
+    The best way to do this would be to use JavaScript, show a delayed hint for a
+    first time users, then hide it and store a status in cookie or localStorage...
+
+    But I wanted to have some CSS fun and avoid additional scripting...
+
+    Let me explain it first, so maybe the transition magic will be more readable
+    when you read the code.
+
+    First of all I wanted the hint to appear only when user is idle for a while.
+    You can't detect the 'idle' state in CSS, but I delayed a appearing of the
+    hint by 5s using transition-delay.
+
+    You also can't detect in CSS if the user is a first-time visitor, so I had to
+    make an assumption that I'll only show the hint on the first step. And when
+    the step is changed hide the hint, because I can assume that user already
+    knows how to navigate.
+
+    To summarize it - hint is shown when the user is on the first step for longer
+    than 5 seconds.
+
+    The other problem I had was caused by the fact that I wanted the hint to fade
+    in and out. It can be easily achieved by transitioning the opacity property.
+    But that also meant that the hint was always on the screen, even if totally
+    transparent. It covered part of the screen and you couldn't correctly clicked
+    through it.
+    Unfortunately you cannot transition between display `block` and `none` in pure
+    CSS, so I needed a way to not only fade out the hint but also move it out of
+    the screen.
+
+    I solved this problem by positioning the hint below the bottom of the screen
+    with CSS transform and moving it up to show it. But I also didn't want this move
+    to be visible. I wanted the hint only to fade in and out visually, so I delayed
+    the fade in transition, so it starts when the hint is already in its correct
+    position on the screen.
+
+    I know, it sounds complicated ... maybe it would be easier with the code?
+*/
+
+.hint {
+    /*
+        We hide the hint until presentation is started and from browsers not supporting
+        impress.js, as they will have a linear scrollable view ...
+    */
+    display: none;
+
+    /*
+        ... and give it some fixed position and nice styles.
+    */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+
+    font-size: 50px;
+    padding: 20px;
+
+    z-index: 100;
+
+    /*
+        By default we don't want the hint to be visible, so we make it transparent ...
+    */
+    opacity: 0;
+
+    /*
+        ... and position it below the bottom of the screen (relative to it's fixed position)
+    */
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    /*
+        Now let's imagine that the hint is visible and we want to fade it out and move out
+        of the screen.
+
+        So we define the transition on the opacity property with 1s duration and another
+        transition on transform property delayed by 1s so it will happen after the fade out
+        on opacity finished.
+
+        This way user will not see the hint moving down.
+    */
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+/*
+    Now we 'enable' the hint when presentation is initialized ...
+*/
+.impress-enabled .hint { display: block }
+
+/*
+    ... and we will show it when the first step (with id 'bored') is active.
+*/
+.impress-on-bored .hint {
+    /*
+        We remove the transparency and position the hint in its default fixed
+        position.
+    */
+    opacity: 1;
+
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+
+    /*
+        Now for fade in transition we have the oposite situation from the one
+        above.
+
+        First after 4.5s delay we animate the transform property to move the hint
+        into its correct position and after that we fade it in with opacity
+        transition.
+    */
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s;
+    transition:         opacity 1s 5s,         transform 0.5s 4.5s;
+}
+
+/*
+    And as the last thing there is a workaround for quite strange bug.
+    It happens a lot in Chrome. I don't remember if I've seen it in Firefox.
+
+    Sometimes the element positioned in 3D (especially when it's moved back
+    along Z axis) is not clickable, because it falls 'behind' the <body>
+    element.
+
+    To prevent this, I decided to make <body> non clickable by setting
+    pointer-events property to `none` value.
+    Value if this property is inherited, so to make everything else clickable
+    I bring it back on the #impress element.
+
+    If you want to know more about `pointer-events` here are some docs:
+    https://developer.mozilla.org/en/CSS/pointer-events
+
+    There is one very important thing to notice about this workaround - it makes
+    everything 'unclickable' except what's in #impress element.
+
+    So use it wisely ... or don't use at all.
+*/
+.impress-enabled          { pointer-events: none }
+.impress-enabled #impress { pointer-events: auto }
+
+/*
+    There is one funny thing I just realized.
+
+    Thanks to this workaround above everything except #impress element is invisible
+    for click events. That means that the hint element is also not clickable.
+    So basically all of this transforms and delayed transitions trickery was probably
+    not needed at all...
+
+    But it was fun to learn about it, wasn't it?
+*/
+
+/*
+    That's all I have for you in this file.
+    Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
+    for you.
+*/
