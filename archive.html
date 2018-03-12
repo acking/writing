@@ -11,7 +11,7 @@ permalink: "archive/index.html"
       {{ post_month_year }}
     </h3>
   {% endif %}
-  <p>
+  <p style="margin:0">
     <a href="{{ post.url | prepend:site.baseurl}}" class="post-title-archive">{{ post.title }}</a>
     <small class="text-muted">{{ post.date | date_to_string }}</small>
   </p>
