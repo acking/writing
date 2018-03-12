@@ -1,14 +1,9 @@
 <div>
-
-<p class="text-muted">
-    <span class="c666">时间:</span>{{ page.date | date_to_string }}&nbsp;
-    <span class="c666">标签:</span>
-    {% for tag in page.tags %}
-    <a class="post-category " > {{ tag }} </a>
-    {% endfor %}
-</p>
-
-<!-- <div class="well well-sm">
-  {% include ribbon.html %} You can customize this section in <code>_includes</code> &rarr; <code>post-header.html</code>.
-</div> -->
+	<p class="text-muted">
+	    <span class="c666">时间:</span>{{ page.date | date_to_string }}&nbsp;
+	    <span class="c666">标签:</span>
+	    {% for tag in page.tags %}
+	    <a class="post-category " > {{ tag }} </a>
+	    {% endfor %}
+	</p>
 </div>
