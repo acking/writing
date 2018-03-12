@@ -4,11 +4,11 @@ category: "代码人生"
 tags: [Unicode编码方案]
 ---
 在 CSS 中使用中文字体通常直接设置字体名称，比如设置字体为宋体：font-family:’宋体’；但因此产生的一个问题是，如果 CSS 编码有误，会导致页面加载后 CSS 中的中文字体乱码，请看下图所示：
-![](http://acking.github.io/writing/images/20100712/css_font_encode.png)
+![](../images/20100712/css_font_encode.png)
 
 
 通常会采用对中文字体进行 Unicode 编码的方式来解决这个危险的问题。比如字符“宋体”经过 Unicode 编码后为 “\5b8b\4f53″。以淘宝为例：font:12px/1.5 tahoma,arial,\5b8b\4f53; 预选的中文字体是编码后的宋体。
-![](http://acking.github.io/writing/images/20100712/css_font_unicode.png)
+![](../images/20100712/css_font_unicode.png)
 
 于此获得到了 “%u9ED1%u4F53″，将其改写为 “\9ED1\4F53″ 即可写入 CSS 文件。
 
