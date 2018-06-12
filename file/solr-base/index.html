@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Solr</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+        <link rel="stylesheet" href="css/theme/white.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- myself -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h1>Solr 在项目中的使用</h1>
+                    <h3>&nbsp;</h3>
+                    <p>
+                        <small>Created by <a target="_blank" href="http://blog.acking.vip">陈琦 [acking]</a></small>
+                    </p>
+                    <p>
+                        <small class="c-999">2018-06-12</small>
+                    </p>
+                </section>
+                <section>
+                	<div id="fragments-solr">
+	                    <h2>APACHE SOLR™ 7.3.1</h2>
+	                    <blockquote  class="fragment" cite="http://lucene.apache.org/solr/">
+Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene™.
+	                    </blockquote>
+                        <blockquote  class="fragment" cite="http://lucene.apache.org/solr/">
+                            <div>
+                                <p class="font-14">
+Solr（读作“solar”）是Apache Lucene项目的开源企业搜索平台。其主要功能包括全文检索、命中标示、分面搜索、动态聚类、数据库集成，以及富文本（如Word、PDF）的处理。Solr是高度可扩展的，并提供了分布式搜索和索引复制。Solr是最流行的企业级搜索引擎，Solr 4还增加了NoSQL支持。
+                                </p>
+                                <p>
+                                    <small><a target="_blank" href="https://zh.wikipedia.org/wiki/Solr">传送门>></a></small>
+                                </p>
+                            </div>
+                        </blockquote>
+                    </div>
+                </section>
+                <section>
+                    <section>
+                        <h2>Solr WEB操作界面查询</h2>
+                        <!-- <p><img class="img" src="img/solr-query.png" /></p> -->
+                        <p><iframe frameborder="no" width="100%" height="408px" src="http://solrcluster.rechaos.com:8983/solr/#/socialbakers.metrics/query"></iframe></p>
+                        <p><small><a target="_blank" href="http://solrcluster.rechaos.com:8983/solr/#/socialbakers.metrics/query">传送门</a></small></p>
+                    </section>
+                    <section>
+                        <h2>Solr 常用查询一（Query）</h2>
+                        <div class="eg-p">
+                            <h3>Request-Handler (qt) [/select] //Request-Handler(qt): 要进行的操作(select\update\delete) <h3>
+                            <h3>common<h3>
+                            <hr>
+                            <ul class="fragment">
+                                <li>q [ *:* ] //使用标准查询语法定义的查询语句，必填</li>
+                                <li>fq [ source:youku ] //指定用于对查询结果进行过滤的过滤器(也看作是一种query) eg: fq=price:[100 To *]&fq=setction:0</li>
+                                <li>fq [ day:[2018-04-14T00:00:00Z TO 2018-04-15T00:00:00Z] ]</li>
+                                <li>sort [ uid asc ] //定响应的排序方式：升序asc或降序desc.同时需要指定按哪个字段进行排序。eg: sort=price desc,score asc</li>
+                                <li>start, rows [ 0, 10 ] //start指定显示查询结果的开始位置，默认是0 rows指定一次显示多少行查询结果，默认是10</li>
+                                <li>fl [ channel day ] //指定查询结果中返回的字段，该字段的stored=”true”或docValues=”true” ,eg:fl=id,title,product(price, popularity)
+                                </li>
+                                <li>df [ uid ] //默认查找的字段</li>
+                                <li>Raw Query Parameters [ facet.field=primary_class ]</li>
+                                <li>wt //执行响应的输出格式：xml或json等</li>
+                                <li>indent //返回的结果是否缩进，默认关闭，用 indent=true|on 开启，一般调试json,php,phps,ruby输出才有必要用这个参数。</li>
+                                <li>debugQuery //设置返回结果是否显示Debug信息。</li>
+                            </ul>
+                            <p><small><a target="_blank" href="https://blog.csdn.net/zhufenglonglove/article/details/51518846">传送门</a></small></p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Solr 常用查询二（Query）</h2>
+                        <div class="eg-p">
+                            <div class="fragment">
+                                <h3>facet<h3>
+                                <ul>
+                                    <li>facet.query [ source:toutiao ] //指定查询语句</li>
+                                    <li>facet.field [ category ] //代表根据字段分组查询，类似数据库的group by count的组合</li>
+                                    <li>ffacet.prefix [ facet.prefix ] //表示Facet字段值的前缀。比如facet.field=cpu&facet.prefix=Intel，那么对cpu字段进行Facet查询，返回的cpu都是以Intel开头的， AMD开头的cpu型号将不会被统计在内。</li>
+                                </ul>
+                            </div>
+                            <div class="fragment">
+                                <h3>dismax<h3>
+                                <ul>
+                                    <li>dismax参数用于处理用户输入的简单短语，并根据字段的重要度进行加权查询，查询范围为多个字段区域。dismax会忽略搜索字符串中的 "AND","OR", "+", "-". dismax中的详细参数默认可以在solrconfig.xml中设置。</li>
+                                </ul>
+                            </div>
+                            <div class="fragment">
+                                <h3>hl<h3>
+                                <ul>
+                                    <li>hl: high light 高亮。hl=true表示启用高亮 </li>
+                                    <li>hl.fl ： 用空格或逗号隔开的字段列表（指定高亮的字段）。要启用某个字段的highlight功能，就得保证该字段在schema中是stored。如果该参数未被给出，那么就会高 亮默认字段 standard handler会用df参数，dismax字段用qf参数。你可以使用星号去方便的高亮所有字段。如果你使用了通配符，那么要考虑启用 hl.requiredFieldMatch选项。
+                                    </li>
+                                </ul>
+                            </div>
+                            <p><small><a target="_blank" href="https://lucene.apache.org/solr/guide/7_3/query-screen.html">传送门</a></small></p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Solr WEB操作界面</h2>
+                        <!-- <p><img class="img" src="img/solr-web.jpg" /></p> -->
+                        <p><iframe frameborder="no" width="100%" height="408px" src="http://solrcluster.rechaos.com:8983/solr/"></iframe></p>
+                        <p><small><a target="_blank" href="https://blog.csdn.net/zcl_love_wx/article/details/52092098">传送门</a></small></p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Cassandra中Cql查询工具</h2>
+                        <p><img class="img" src="img/solr-cassandra.png" /></p>
+                    </section>
+                    <section>
+                        <h2>Cassandra中Cql使用Solr查询一</h2>
+                        <div>
+<pre>
+    <code data-trim data-noescape>
+//常用cql查询
+SELECT * FROM socialbakers.channelname where id = 'AcquadiParma_China';
+
+//加入solr_query查询
+SELECT * FROM socialbakers.channelname WHERE solr_query='id:"UMjQ2NDE1Mg=="' limit 3000;
+
+//删除
+//DELETE FROM socialbakers.channelname WHERE id = 'UMjQ2NDE1Mg';
+
+//更新
+//UPDATE socialbakers.channelname SET uid = '50287218' WHERE id = 'UMjAxMTQ4ODcy';
+
+    </code>
+</pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Cassandra中Cql使用Solr查询二</h2>
+                        <p><iframe frameborder="no" width="100%" height="420px" src="https://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/srch/queriesCql.html#queriesCql__srchCreateCQLsolrQuery"></iframe></p>
+                        <p><small><a target="_blank" href="https://docs.datastax.com/en/datastax_enterprise/5.0/datastax_enterprise/srch/queriesCql.html#queriesCql__srchCreateCQLsolrQuery">传送门</a></small></p>
+                    </section>
+                </section>
+
+                <section id="fragments1">
+                	<h2>Cassandra中Solr索引重建</h2>
+                    <div class="eg-p">
+                    	<ul>
+                    		<li class="fragment">http://sh.dc.search-1.rechaos.com:8983/solr/admin/cores?action=UNLOAD&name=socialbakers.channelname&deleteDataDir=true&deleteResources=true
+                            </li>
+                    		<li class="fragment">http://sh.dc.search-1.rechaos.com:8983/solr/admin/cores?action=CREATE&name=socialbakers.channelname&generateResources=true&reindex=true
+                            </li>
+                    	</ul>
+                        <ul>
+                            <li class="fragment">删除</li>
+                            <li class="fragment">action=UNLOAD</li>
+                            <li class="fragment">name=socialbakers.channelname</li>
+                            <li class="fragment">deleteDataDir=true</li>
+                            <li class="fragment">deleteResources=true</li>
+                        </ul>
+                        <ul>
+                            <li class="fragment">创建</li>
+                            <li class="fragment">action=CREATE</li>
+                            <li class="fragment">name=socialbakers.channelname</li>
+                            <li class="fragment">generateResources=true</li>
+                            <li class="fragment">reindex=true</li>
+                        </ul>
+                    </div>
+                </section>
+				<section>
+                    <h1>Q & A</h1>
+                </section>
+
+				<section>
+                    <h1>THE END</h1>
+                    <p>
+                        <small class="c-999">Thank you！</small>
+                    </p>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
