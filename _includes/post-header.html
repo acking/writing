@@ -1,6 +1,6 @@
 <div>
 	<p class="text-muted">
-	    <span class="c666">时间:</span>{{ page.date | date_to_string }}&nbsp;
+	    <span class="c666">时间:</span>{{ page.date | date: "%Y-%m-%d" }}&nbsp;
 	    <span class="c666">标签:</span>
 	    {% for tag in page.tags %}
 	    <a class="post-category " > {{ tag }} </a>
