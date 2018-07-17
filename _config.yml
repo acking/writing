@@ -10,6 +10,7 @@ timezone: Asia/Shanghai
 # description: "..."
 
 markdown: rdiscount
+highlighter: pygments
 excerpt_separator: "\n\n"
 paginate: 10
 paginate_path: "page:num"
