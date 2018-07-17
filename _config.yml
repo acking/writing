@@ -3,6 +3,9 @@ url: "http://blog.acking.vip" # the base hostname & protocol for your site
 name: "首页"
 title: "ChenQi's BLOG"
 
+language: zh-Hans
+timezone: Asia/Shanghai
+
 # This is used by feed.xml. Uncomment if you want to use it.
 # description: "..."
 
