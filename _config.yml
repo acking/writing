@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 markdown: rdiscount
 highlighter: pygments
 excerpt_separator: "\n\n"
-paginate: 10
+paginate: 12
 paginate_path: "page:num"
 
 gems:

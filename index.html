@@ -17,52 +17,15 @@ layout: default
 
 <!-- 分页链接 -->
 <div class="pagination">
-  <ul> 
     {% if paginator.previous_page %}
-        <li>
-            {% if paginator.previous_page == 1 %}
-                <a href="{{ site.baseurl }}">上一页</a>
-            {% else %}
-                <a href="{{ paginator.previous_page_path | prepend:site.baseurl }}">上一页</a>
-            {% endif %}
-        </li>
+        <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
     {% else %}
-        <li class="disabled">
-            <span>上一页</span>
-        </li>
+        <span class="previous">Previous</span>
     {% endif %}
-    
-    {% if paginator.page == 1 %}
-        <li class="active">
-            <span>1</span>
-        </li>
-    {% else %}
-        <li>
-            <a href="{{ site.baseurl }}">1</a>
-        </li>
-    {% endif %}
-    
-    {% for count in (2.paginator.total_pages) %}
-        {% if count == paginator.page %}
-        <li class="active">
-            <span>{{ count }}</span>
-        </li>
-        {% else %}
-        <li>
-            <a href="{{ site.baseurl }}/page{{ count }} ">{{ count }}</a>
-        </li>
-        {% endif %}
-    {% endfor %}
-  
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
-        <li>
-            <a href="{{ paginator.next_page_path | prepend:site.baseurl }}">下一页</a>
-        </li>
+        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
     {% else %}
-        <li class="disabled">
-            <span>下一页</span>
-        </li>
+        <span class="next ">Next</span>
     {% endif %}
-  
-  </ul>
 </div>
