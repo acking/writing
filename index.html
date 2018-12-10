@@ -18,7 +18,7 @@ layout: default
 <!-- 分页链接 -->
 <div class="pagination">
     {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
+        {% if paginator.previous_page === 1 %}
             <a href="{{ site.baseurl }}">上一页</a>
         {% else %}
             <a href="/page{{ paginator.previous_page }}" class="previous">上一页</a>
