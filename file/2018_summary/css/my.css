@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-1-6, 21:28:13
+    Author     : chenqi
+*/
+body {
+	background:#1c1e20 url('../img/hotnest_logo_h.png') no-repeat 50px 30px;
+	background-size: 150px;
+}
+.reveal a:not(.image) {
+	color: #f6ae34;
+}
+.reveal a:not(.image):hover {
+  color: #ff750a;
+}
+.reveal .progress span { background: #ff750a; }
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: #ff750a;
+}
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: #ff750a;
+}
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: #ff750a;
+}
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #ff750a;
+}
+
+.reveal li.page-fy { list-style:none; margin-left:5px; font-size:70%; color:#f00;}
+.reveal p.page-fy { list-style:none; font-size:50%; color:#999;}
+.reveal p.page-time { font-size:50%; color:#ff750a; }
+
+.c-333 { color:#333;}
+.reveal a:not(.image):hover {
+  color: #71e9f4;
+  text-shadow: none;
+  border: none; 
+}
+.reveal .roll span:after {
+  color: #fff;
+  background: #0d99a5; }
+
+
+
+.c-666 { color:#666;}
+.c-999 { color:#999;}
+.c-f00 { color:#f00;}
+.c-69a1ff { color:#69a1ff;}
+.c-b256ff { color:#b256ff;}
+.c-17ff2e { color:#17ff2e;}
+.c-ff750a { color:#ff750a;}
+.c-f6ae34 { color: #f6ae34;}
+
+
+
+.c-ff0000 { color: #FF0000; }
+.c-ff7f00 { color: #FF7F00; }
+.c-ffff00 { color: #FFFF00; }
+.c-00ff00 { color: #00FF00; }
+.c-00ffff { color: #00FFFF; }
+.c-0000ff { color: #0000FF; }
+.c-8b00ff { color: #8B00FF; }
+
+.c-fe6363 { color:#fe6363; }
+.c-7baaff { color:#7baaff; }
+.c-ff9642 { color:#ff9642; }
+.c-32cd32 { color:#32cd32; }
+.c-7164bb { color:#7164bb; }
+.c-ffc028 { color:#ffc028; }
+.c-8a9fb3 { color:#8a9fb3; }
+.c-3fcac2 { color:#3fcac2; }
+.c-b9eb46 { color:#b9eb46; }
+.c-a37b77 { color:#a37b77; }
+.c-f25d8e { color:#f25d8e; }
+.c-bdbdbd { color:#bdbdbd; }
+.c-2fb3ff { color:#2fb3ff; }
+.c-d3c1f6 { color:#d3c1f6; }
+.c-61719a { color:#61719a; }
+
+.reveal .with-blockquote { width:80%; font-size:55%;}
+.reveal section img { border-radius:6px;}
+table.tab1 { border:2px solid #fff;}
+
+.reveal ol, .reveal ul { line-height: 1.5em; font-size: 80%; }
+.reveal small { font-size: .5em; }
+
+ul.img-box,ul.img-box2 {
+  list-style: none;
+}
+
+ul.img-box li {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
+
+
+
+
+
