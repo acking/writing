@@ -30,6 +30,19 @@ body {
 .reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
   border-bottom-color: #ff750a;
 }
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #ff750a;
+}
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #ff750a;
+}
+.reveal .controls div.navigate-up.enabled:hover {
+    border-bottom-color: #ff750a;
+}
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #ff750a;
+}
+
 
 .reveal li.page-fy { list-style:none; margin-left:5px; font-size:70%; color:#f00;}
 .reveal p.page-fy { list-style:none; font-size:50%; color:#999;}
