@@ -1,0 +1,138 @@
+  /* 定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(240, 240, 240, 1);
+}
+ 
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240, .5);
+}
+ 
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+  background-color: rgba(240, 240, 240, .5);
+}
+
+.theme-dark {
+	background: #1d1d1f;
+	/*background: #1d1d1f;*/
+}
+.theme-dark .slide {
+    border: 1px solid #1d1d1f;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    /*border: none;*/
+    /*background: transparent;*/
+}
+.theme-dark .slide h1 {
+	/*color: #fff;*/
+}
+
+.no-bg {
+    background: transparent;
+    background-image: url(../images/background-t.png);
+}
+.no-bg h1 {
+	color: #fff;
+}
+
+.no-bg h1,
+.no-bg h2,
+.no-bg h3 {
+    position: absolute;
+    left: 45px; /* slide width is 900px, so this is like a 5% margin on both sides */
+    width: 90%;
+    text-align: center;    
+}
+.no-bg h1 { top: 50px; }
+.no-bg h2 { top: 400px; }
+.no-bg h3 { top: 500px; }
+
+.no-bg2 {
+  background: transparent;
+  background-image: none;
+}
+
+p.text {
+  text-align: left;
+}
+
+.title-h1 {
+	color: #000;
+	font-size: 3.8em;
+  /*text-shadow:0px 0px 8px #fff, 0px 0px 42px #ffc107, 0px 0px 72px #f6ae34,0px 0px 150px #fda127;*/
+}
+.no-bg h1.end-h1 {
+  color: #fff;
+  font-size: 2.8em;
+  top: 80px;
+}
+.no-bg h2.end-h2 {
+  color: #fff;
+  font-size: 3.8em;
+  top: 220px;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+}
+.no-bg h3.end-h3 {
+  color: #999;
+}
+.toc-ul {
+  height: 450px;
+  width: 40%;
+  float: left;
+	font-size: 1em;
+}
+.toc-ul-border {
+  margin-left: 2%;
+  margin-right: 6%;
+  border-right: 3px dotted #999;
+}
+.toc-ul li ul {
+  font-size: 0.6em;
+}
+p.scroll-note {
+	padding: 0;
+	margin: 0;
+	font-size: 0.6em;
+	color: #999;
+}
+.scroll-box {
+	padding: 0;
+	height: 400px;
+	overflow-y: scroll;
+}
+ul.l-1 li {
+	color: #333;
+	font-size: 1.2em;
+}
+ul.l-2 li {
+	color: #666;
+	font-size: 0.8em;
+}
+ul.l-3 li {
+	font-size: 0.6em;
+}
+.img-box {
+  text-align: center;
+}
+img.show-full {
+  width: 75%;
+}
+
+img.show-full:hover {
+  width: 85%;
+}
+
+
+
+
+
+
