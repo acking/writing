@@ -16,20 +16,28 @@ layout: default
 {% endfor %}
 
 <!-- 分页链接 -->
+{% if paginator.total_pages > 1 %}
 <div class="pagination">
-    {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-            <a href="{{ site.baseurl }}">上一页</a>
-        {% else %}
-            <a href="/page{{ paginator.previous_page }}" class="previous">上一页</a>
-        {% endif %}
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
     {% else %}
-        <span class="previous">上一页</span>
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
-        <span class="page_number ">当前第{{ paginator.page }}页，共{{ paginator.total_pages }}页</span>
-    {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="next">下一页</a>
-    {% else %}
-        <span class="next ">下一页</span>
-    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
 </div>
+{% endif %}
