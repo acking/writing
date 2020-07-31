@@ -3,8 +3,6 @@ title: "代码编写规范"
 category: "培训"
 tags: [code docs]
 ---
-# 代码编写规范
-
 ## 命名规范
 
 #### 文件编码统一使用 UTF-8 编码
@@ -24,7 +22,6 @@ tags: [code docs]
 5）帕斯卡命名法，如：HelloWorld
 
 6）其他方法
-
 
 
 ## 接口URL规范（RESTful API）
