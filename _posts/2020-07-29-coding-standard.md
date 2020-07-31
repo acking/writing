@@ -6,7 +6,9 @@ tags: [code docs]
 #代码编写规范
 
 ##命名规范
+
 ####文件编码统一使用 UTF-8 编码
+
 ####核心原则：语义化
 
 命名方法 要求采用统一的命名方法。常用命名方法有：
@@ -29,6 +31,7 @@ tags: [code docs]
 
 
 https://api.example.com/v1/
+
 
 ```
 GET：读取（Read）
@@ -62,10 +65,6 @@ eg:过滤信息（Filtering）
 ```
 
 
-
-
-
-
 [RESTful API 设计指南 - 阮一峰](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
 
 [RESTful API 最佳实践 - 阮一峰](http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html)
@@ -79,6 +78,7 @@ eg:过滤信息（Filtering）
 
 ##接口文档规范
 
+
 ```
 ## 用户模块 UserController.php
 #### 获取用户列表
@@ -91,6 +91,7 @@ eg:过滤信息（Filtering）
 [GET]- v1/users/user-profile/<token>
 
 ```
+
 ## 附件模块 WebFileController.php
 
 数据库字段
@@ -162,6 +163,7 @@ or
 ```
 
 ####比较推荐的返回格式
+
 ```
 http Status 200/500/400/....
 API 返回格式
@@ -199,6 +201,7 @@ status 为业务状态码，根据公司业务制定
 
 
 ##代码管理规范
+
 目录结构
 
 ```
@@ -214,6 +217,7 @@ git 使用.gitignore [忽略特殊文件](https://www.liaoxuefeng.com/wiki/89604
 
 
 ##代码安全规范
+
 使用基本的 web 安全防范策略（XSS、CSRF、统一登录等）
 
 Debug 信息禁止对外暴露（测试、正式环境禁止开启 debug 模式，建议规范错误日志，查看日志定位问题）
