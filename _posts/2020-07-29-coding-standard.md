@@ -3,13 +3,13 @@ title: "代码编写规范"
 category: "培训"
 tags: [code docs]
 ---
-#代码编写规范
+# 代码编写规范
 
-##命名规范
+## 命名规范
 
-####文件编码统一使用 UTF-8 编码
+#### 文件编码统一使用 UTF-8 编码
 
-####核心原则：语义化
+#### 核心原则：语义化
 
 命名方法 要求采用统一的命名方法。常用命名方法有：
 
@@ -27,7 +27,7 @@ tags: [code docs]
 
 
 
-##接口URL规范（RESTful API）
+## 接口URL规范（RESTful API）
 
 
 https://api.example.com/v1/
@@ -76,7 +76,7 @@ eg:过滤信息（Filtering）
 [RESTful API Designing guidelines — The best practices](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
 
 
-##接口文档规范
+## 接口文档规范
 
 
 ```
@@ -162,7 +162,7 @@ or
 
 ```
 
-####比较推荐的返回格式
+#### 比较推荐的返回格式
 
 ```
 http Status 200/500/400/....
@@ -200,7 +200,7 @@ status 为业务状态码，根据公司业务制定
 ```
 
 
-##代码管理规范
+## 代码管理规范
 
 目录结构
 
@@ -216,7 +216,7 @@ git 使用.gitignore [忽略特殊文件](https://www.liaoxuefeng.com/wiki/89604
 [gitignore](https://github.com/github/gitignore)
 
 
-##代码安全规范
+## 代码安全规范
 
 使用基本的 web 安全防范策略（XSS、CSRF、统一登录等）
 
