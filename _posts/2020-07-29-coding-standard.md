@@ -1,4 +1,3 @@
-2020-07-29-coding-standard.md
 ---
 title: "代码编写规范"
 category: "培训"
