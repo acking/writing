@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>For U</title>
+	<style type="text/css">
+		.box {
+			text-align: center;
+			font-size: 22px;
+		}
+		h2 {
+			background: linear-gradient(90deg, red, blue);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			margin-top: 150px;
+		}
+	</style>
+</head>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+  <script src="js/jquery.typer.js"></script>
+<body>
+	<div class="box" >
+	  <h2 data-typer-targets="Lee ，生日快乐，开心每一天！"></h2>
+	</div>
+  <script>
+        $.typer.options.typeSpeed = 500;
+        $.typer.options.highlightSpeed = 20;
+        $(function () {
+           $('[data-typer-targets]').typer();
+        });
+  </script>
+</body>
+</html>
