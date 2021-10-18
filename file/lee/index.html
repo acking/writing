@@ -4,17 +4,24 @@
   <meta charset="utf-8">
 	<title>For Lee</title>
 	<style type="text/css">
+		body{
+			font-family:Microsoft YaHei;
+		}
 		.box {
 			position: relative;
 			z-index: 9;
 			text-align: center;
-			margin-top: 200px;
+			margin-top: 220px;
 		}
 		.box p {
+			line-height: 42px;
+			margin: 0;
+			padding: 0;
 			color: #fff;
+			font-size: 36px;
 		}
 		h2 {
-			font-size: 32px;
+			font-size: 48px;
 			color: #fff;
 		}
 		@-webkit-keyframes STAR-MOVE {
@@ -69,32 +76,66 @@
   <script src="js/jquery.js"></script>
   <script src="js/jquery.typer.js"></script>
 <body>
-  <audio id="audio" loop autoplay>
+	<embed src="mp3/loveofmylife.min.mp3" autoplay="true" autostart="true" loop="true" hidden="true"></embed>
+  <!-- <audio id="audio" loop autoplay>
 		<source src="mp3/loveofmylife.mp3" type="audio/mpeg">
-		<!-- <source src="mp3/loveofmylife.ogg" type="audio/ogg"> -->
+		<source src="mp3/loveofmylife.ogg" type="audio/ogg">
 		<!-- <source src="mp3/loveofmylife.m4a" type="audio/mpeg"> -->
-		Your browser does not support the audio element.
-	</audio> 
+		<!-- Your browser does not support the audio element. -->
+	</audio>  -->
 	<div class="box">
-	  <h2 data-typer-targets="Lee ，生日快乐，开心每一天！"></h2>
-	  <p data-l1="愿生活里有牛奶和面包"></p>
-	  <p data-l2="背包里里有书本和远方"></p>
-	  <p data-l3="愿一切困难都能云淡风轻"></p>
-	  <p data-l4="每身孤独都拥抱共鸣"></p>
-	  <p data-l5="长夜里总有梦想发亮"></p>
-	  <p data-l6="人海中常有良友相伴"></p>
-	  <p data-l7="所想皆所愿，所愿皆所得"></p>
+		<div class="autotype" id="autotype">
+			<h2>Lee ，生日快乐，开心每一天！</h2>
+			<p>愿生活里有牛奶和面包</p>
+			<p>背包里有书本和远方</p>
+			<br>
+			<p>愿一切困难都能云淡风轻</p>
+			<p>每身孤独都拥抱共鸣</p>
+			<br>
+			<p>长夜里总有梦想发亮</p>
+			<p>人海中常有良友相伴</p>
+			<br>
+			<p>所想皆所愿，所愿皆所得</p>
+			<br>
+		</div>
 	</div>
 	<div id="background" class="wall"></div>
 	<div id="midground" class="wall"></div>
 	<div id="foreground" class="wall"></div>
   <script>
-    $.typer.options.typeSpeed = 500;
-    $.typer.options.highlightSpeed = 20;
-    $(function () {
-			var a = $('[data-typer-targets]').typer();
-			console.log(a)
-    });
+    $.fn.autotype = function() {
+    var $text = $(this);
+
+    console.log('$text:', $text);
+    var str = $text.html(); //返回被选 元素的内容
+    console.log('str:', str);
+    var index = 0;
+    var x = $text.html('');
+    console.log('x:', x);
+    //$text.html()和$(this).html('')有区别
+
+    var timer = setInterval(function() {
+        //substr(index, 1) 方法在字符串中抽取从index下标开始的一个的字符
+        var current = str.substr(index, 1);
+
+        if (current == '<') {
+            //indexOf() 方法返回">"在字符串中首次出现的位置。
+            index = str.indexOf('>', index) + 1;
+        } else {
+            index++;
+        }
+
+        //console.log(["0到index下标下的字符",str.substring(0, index)],["符号",index & 1 ? '_': '']);
+        //substring() 方法用于提取字符串中介于两个指定下标之间的字符
+        $text.html(str.substring(0, index) + (index & 1 ? '_' : ''));
+        index > $text.html().length + 10 && (index = 0);
+        /*if(index >= str.length){
+        	clearInterval(timer);
+
+		        }*/
+		    }, 300);
+		};
+		$("#autotype").autotype();
   </script>
 </body>
 </html>
