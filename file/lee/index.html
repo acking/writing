@@ -65,7 +65,7 @@
   <script src="js/jquery.js"></script>
   <script src="js/jquery.typer.js"></script>
 <body>
-  <audio loop autoplay controls>
+  <audio id="audio" loop autoplay controls>
    <source src="mp3/loveofmylife.ogg" type="audio/ogg">
    <source src="mp3/loveofmylife.m4a" type="audio/mpeg">
 	 Your browser does not support the audio element.
@@ -77,11 +77,19 @@
 	<div id="midground" class="wall"></div>
 	<div id="foreground" class="wall"></div>
   <script>
-        $.typer.options.typeSpeed = 500;
-        $.typer.options.highlightSpeed = 20;
-        $(function () {
-           $('[data-typer-targets]').typer();
-        });
+    $.typer.options.typeSpeed = 500;
+    $.typer.options.highlightSpeed = 20;
+    $(function () {
+			$('[data-typer-targets]').typer();
+			setInterval("musicAutoPlay()", 10); //必须使用一个时间函数 ，不触发的情况下还是报错
+    });
+    //解决谷歌浏览器音乐不能自动播放的问题，
+		function musicAutoPlay(){
+	    let music = document.getElementById('audio')//获取audio
+	    if (music.paused) {//判断一下paused（pused为真是禁用的）
+	        music.play()//调用播放
+	    }
+		}
   </script>
 </body>
 </html>
