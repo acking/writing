@@ -4,23 +4,76 @@
 	<title>For Lee</title>
 	<style type="text/css">
 		.box {
+			position: relative;
+			z-index: 9;
 			text-align: center;
-			font-size: 22px;
+			margin-top: 200px;
 		}
 		h2 {
-			background: linear-gradient(90deg, red, blue);
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-			margin-top: 150px;
+			font-size: 32px;
+			color: #fff;
+		}
+		@-webkit-keyframes STAR-MOVE {
+			from {
+				background-position:0% 0%
+			}
+			to { 
+				background-position: 600% 0%
+			}
+		}
+		@keyframes STAR-MOVE {
+			from {
+				background-position: 0% 0%
+			}
+			to { 
+				background-position: 600% 0%
+			}
+		}
+		.wall{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			
+		}
+		div#background{
+			background: black url('img/background.png') repeat-x 5% 0%;
+			-webkit-animation: STAR-MOVE  200s linear infinite;
+			-moz-animation: STAR-MOVE  200s linear infinite;
+			-ms-animation: STAR-MOVE  200s linear infinite;
+			animation: STAR-MOVE  200s linear infinite;
+		}
+		div#midground{
+			background:url('img/midground.png')repeat 20% 0%;
+			z-index: 1;
+			-webkit-animation: STAR-MOVE  100s linear infinite;
+			-moz-animation: STAR-MOVE  100s linear infinite;
+			-ms-animation: STAR-MOVE  100s linear infinite;
+			animation: STAR-MOVE  100s linear infinite;
+		}
+		div#foreground{
+			background:url('img/foreground.png')repeat 35% 0%;
+			z-index: 2;
+			-webkit-animation: STAR-MOVE  50s linear infinite;
+			-moz-animation: STAR-MOVE  50s linear infinite;
+			-ms-animation: STAR-MOVE  50s linear infinite;
+			animation: STAR-MOVE  50s linear infinite;
 		}
 	</style>
 </head>
   <script src="js/jquery.js"></script>
   <script src="js/jquery.typer.js"></script>
 <body>
+	<audio autoplay="autopaly">
+  	<source src="mp3/loveofmylife.m4a" type="audio/mpeg" />
+  </audio>
 	<div class="box" >
 	  <h2 data-typer-targets="Lee ，生日快乐，开心每一天！"></h2>
 	</div>
+	<div id="background" class="wall"></div>
+	<div id="midground" class="wall"></div>
+	<div id="foreground" class="wall"></div>
   <script>
         $.typer.options.typeSpeed = 500;
         $.typer.options.highlightSpeed = 20;
