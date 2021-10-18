@@ -135,6 +135,7 @@
 		};
 
 		$("#autotype").autotype();
+
 		createjs.Sound.alternateExtensions = ['mp3'];
     createjs.Sound.on('fileload', this.loadHandler, this);
     createjs.Sound.registerSound('loveofmylife.min.mp3', 'sound');
@@ -142,6 +143,36 @@
         console.log('sound load music complete and play');
         var instance = createjs.Sound.play('sound');
     }
+
+    // var soundLoadComplete = false; // 背景音乐是否加载完毕
+    // var backgroundMusicInstance = null; // 背景音乐实例
+    // createjs.Sound.alternateExtensions = ['mp3'];
+    // createjs.Sound.on('fileload', loadHandler, this);
+
+    // function loadHandler(event) {
+    //     console.log('music load complete');
+    //     soundLoadComplete = true;
+    // }
+
+    // document.addEventListener(
+    //     'WeixinJSBridgeReady',
+    //     function() {
+    //         createjs.Sound.registerSound('loveofmylife.min.mp3', 'sound'); // 注意,这句registerSound必须写在WeixinJSBridgeReady回调函数内才行,否则下方createjs.Sound.play就会无效
+    //         console.log('WeixinJSBridgeReady');
+    //         var intInstance = setInterval(function() {
+    //             if (soundLoadComplete) {
+    //                 clearInterval(intInstance);
+    //                 makeLog('play');
+    //                 backgroundMusicInstance = createjs.Sound.play(
+    //                     'sound'
+    //                 );
+    //             }
+    //         }, 10);
+    //     },
+    //     false
+    // );
+
+
   </script>
 </body>
 </html>
