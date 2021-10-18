@@ -10,6 +10,9 @@
 			text-align: center;
 			margin-top: 200px;
 		}
+		.box p {
+			color: #fff;
+		}
 		h2 {
 			font-size: 32px;
 			color: #fff;
@@ -72,11 +75,15 @@
 		<!-- <source src="mp3/loveofmylife.m4a" type="audio/mpeg"> -->
 		Your browser does not support the audio element.
 	</audio> 
-	<div class="box" >
+	<div class="box">
 	  <h2 data-typer-targets="Lee ，生日快乐，开心每一天！"></h2>
-	<!--   <p data-l1="愿生活里有牛奶和面包"></p>
+	  <p data-l1="愿生活里有牛奶和面包"></p>
 	  <p data-l2="背包里里有书本和远方"></p>
-	  <p data-l2="背包里有书本和远方"></p> -->
+	  <p data-l3="愿一切困难都能云淡风轻"></p>
+	  <p data-l4="每身孤独都拥抱共鸣"></p>
+	  <p data-l5="长夜里总有梦想发亮"></p>
+	  <p data-l6="人海中常有良友相伴"></p>
+	  <p data-l7="所想皆所愿，所愿皆所得"></p>
 	</div>
 	<div id="background" class="wall"></div>
 	<div id="midground" class="wall"></div>
@@ -85,7 +92,8 @@
     $.typer.options.typeSpeed = 500;
     $.typer.options.highlightSpeed = 20;
     $(function () {
-			$('[data-typer-targets]').typer();
+			var a = $('[data-typer-targets]').typer();
+			console.log(a)
     });
   </script>
 </body>
