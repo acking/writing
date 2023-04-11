@@ -1,0 +1,4 @@
+@media (max-width: 568px){
+	.box { width:90%;}
+	dl.list-2 dd span { font-size:0.8em;}
+}
