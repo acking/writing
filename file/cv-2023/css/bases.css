@@ -15,8 +15,9 @@ section {padding-bottom:8px;}
 .box { width:75%; height:auto; margin:0 auto;}
 h1.title-1 { text-align:left; font-size:30px; font-weight:700; padding:20px 0; margin-top:10px;}
 ul.list-1 { font-size:18px; list-style:square; padding:0 20px;}
-ul.list-3 { font-size:16px; line-height: 22px; list-style:disc; padding:0px;}
+ul.list-3 { font-size:16px; line-height: 22px; list-style:disc; padding:0px 20px;}
 ul.list-1 li { margin:10px 5px;line-height:24px;}
+ul.list-3 li { margin:5px 5px;line-height:20px;}
 
 dl.list-1 { font-size:18px; list-style:square; padding:0px;}
 dl.list-1 dt { margin:10px 5px 0 5px;line-height:24px;}
